@@ -10,4 +10,6 @@ int main(){
     double total = numbalas*precobalas + numchoco*precochoco;
 
     printf("%.1f\n", total);
+
+    return 0;
 }
