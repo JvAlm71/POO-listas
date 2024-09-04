@@ -1,14 +1,17 @@
 #include <iostream>
 
 int main() {
-    const int n = 7;  
-    int vet[n] = {5, 1, 2, 3, 5, 1, 3}; 
-
+    int n;
+    std::cin >> n;
+    int* vet = new int[n];
     //numero maximo de frequencia
     const int maxfreq = 100000; 
     int freq[maxfreq] = {0}; 
 
-  
+    for (int i = 0; i < n; ++i) {
+        std::cin >> vet[i]; 
+    }
+
     for (int i = 0; i < n; ++i) {
         freq[vet[i]]++; 
     }
@@ -18,6 +21,6 @@ int main() {
             std::cout << i << std::endl;
         }
     }
-
+    delete[] vet;
     return 0;
 }
