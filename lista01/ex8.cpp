@@ -7,12 +7,7 @@ std::string conteudo(std::string nome) {
     std::string linha, resultado;
     
     while (getline(arq, linha)) {
-        for (char c : linha) {
-            resultado += c;
-            if (c == '.') {
-                resultado += '\n';
-            }
-        }
+        resultado += linha + '\n';
     }
     
     arq.close();
