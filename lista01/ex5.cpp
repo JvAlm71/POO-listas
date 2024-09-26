@@ -3,31 +3,24 @@
 int main() {
     int n;
     std::cin >> n;
-    int* vet = new int[n];
-    //numero maximo de frequencia
-    const int maxfreq = 100000; 
-    int freq[maxfreq] = {0}; 
-    bool elemento_impresso = false;
+    const int MAX_VAL = 1000000;
+    int vetor[MAX_VAL];
+    // int count = 0;
+    int count[MAX_VAL + 1] = {0};
 
-    for (int i = 0; i < n; ++i) {
-        std::cin >> vet[i]; 
+    for (int i = 0; i < n; i++) {
+        std::cin >> vetor[i];  
+        count[vetor[i]]++;
     }
 
-    for (int i = 0; i < n; ++i) {
-        freq[vet[i]]++; 
-    }
-
-    for (int i = 0; i < maxfreq; ++i) {
-        if (freq[i] % 2 != 0) {
-            std::cout << i << std::endl;
-            elemento_impresso = true;
+     for (int i = 0; i < n; i++) {
+        if (count[vetor[i]] % 2 != 0) {  
+            std::cout << vetor[i] << " ";  
+            count[vetor[i]] = 0;  
         }
     }
 
-    if (!elemento_impresso) {
-        std::cout << 0 << std::endl;
-    }
-    
-    delete[] vet;
+    std::cout << std::endl;
+
     return 0;
 }

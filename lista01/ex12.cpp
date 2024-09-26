@@ -1,5 +1,4 @@
 #include <iostream>
-
 //Basicamente esse código representa um calculo utilizando uma 
 //propriedade da aritmética modular, que é a potência modular.
 //A potência modular é uma operação que calcula a potência de um número
