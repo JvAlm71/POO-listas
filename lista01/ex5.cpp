@@ -1,8 +1,8 @@
 #include <iostream>
 
 int main() {
-    int n;
-    std::cin >> n;
+    int n = 7;
+    //std::cin >> n;
     const int MAX_VAL = 1000000;
     int vetor[MAX_VAL];
     // int count = 0;
