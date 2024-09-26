@@ -1,37 +1,27 @@
-#include <iostream>
+#include<stdio.h>
+#include<iostream>
 
-int calcularSequencia(int n, int k, int *inicial) {
+int seq(int n, int k,int *ini){
 
-    // Se n for menor que k, retorna o valor direto do vetor inicial
     if (n < k) {
-        return inicial[n];
+        return ini[n];
     } else {
-        int somaQuadrados = 0;
-
-        // Itera sobre os últimos k elementos e soma o quadrado de cada termo
+        int nesimo = 0;
         for (int i = n - k; i < n; ++i) {
-            int valor = calcularSequencia(i, k, inicial);
-            somaQuadrados += valor * valor;
+            int termo = seq(i, k, ini); 
+            nesimo += termo * termo; 
         }
-
-        // Retorna a soma dos quadrados
-        return somaQuadrados;
+     return nesimo; 
     }
-}
+};
 
-int main() {
-    // Vetor com os valores iniciais
-    int termosIniciais[] = {1, -2, 1};
-
-    // Definindo os valores de n e k
+int main(){
+    int ini[] ={1,-2,1};
     int n = 3;
     int k = 3;
 
-    // Calcula o n-ésimo termo da sequência
-    int resultado = calcularSequencia(n, k, termosIniciais);
-
-    // Exibe o resultado final
+    int resultado = seq(n, k, ini);
     std::cout << resultado << std::endl;
 
-    return 0;
-}
+return 0;
+};
