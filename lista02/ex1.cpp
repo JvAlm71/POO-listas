@@ -2,43 +2,37 @@
 
 class Televisao {
 private:
-    bool ligada;
-    int canal;
+    bool _ligada;
+    int _canal;
 
 public:
-    // construtor com valores padrao para ligada e canal
     Televisao(bool ligada = false, int canal = 1) {
-        this->ligada = ligada;
-        this->canal = canal;
+        this->_ligada = ligada;
+        this->_canal = canal;
     }
 
-    
     void liga() {
-        ligada = true;
+        _ligada = true;
     }
-
 
     void desliga() {
-        ligada = false;
+        _ligada = false;
     }
 
-    // aumenta o canal em 1
     void canal_cima() {
-        if (ligada) {
-            canal++;
+        if (_ligada) {
+            _canal++;
         }
     }
 
-    // diminui o canal em 1
     void canal_baixo() {
-        if (ligada) {
-            canal--;
+        if (_ligada) {
+            _canal--;
         }
     }
 
-    // sobrecarga do operador para a saída no formato (estado, canal)
     friend std::ostream& operator<<(std::ostream &out, const Televisao &tv) {
-        out << "(" << (tv.ligada ? "ligada" : "desligada") << ", " << tv.canal << ")";
+        out << "(" << (tv._ligada ? "ligada" : "desligada") << ", " << tv._canal << ")";
         return out;
     }
 };
