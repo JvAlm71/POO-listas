@@ -44,7 +44,7 @@ public:
 };
 
 int main() {
-    Televisao tv;
+    /*Televisao tv;
     std::cout << tv << std::endl;
     tv.canal_cima();
     std::cout << tv << std::endl;
@@ -60,6 +60,6 @@ int main() {
     std::cout << tv << std::endl;
     tv.canal_cima();
     std::cout << tv << std::endl;
-
+*/
     return 0;
 }
