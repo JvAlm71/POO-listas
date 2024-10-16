@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cmath>
+#include <math.h> 
 
 class Vetor {
 private:
@@ -9,7 +9,6 @@ private:
 public:
     Vetor(int x = 0, int y = 0) : _x(x), _y(y) {}
 
-    // conceitos de sobrecargas
     friend Vetor operator+(const Vetor &a, const Vetor &b) {
         return Vetor(a._x + b._x, a._y + b._y);
     }
@@ -34,12 +33,10 @@ public:
         return acos(cosTheta) * (180.0 / M_PI); // conversão para graus
     }
 
-    // metodo para calcular o modulo do vetor
     double abs() const {
         return sqrt(_x * _x + _y * _y);
     }
 
-    // sobrecarga do operador para a saida no formato (x, y)
     friend std::ostream& operator<<(std::ostream &out, const Vetor &v) {
         out << "(" << v._x << ", " << v._y << ")";
         return out;
@@ -57,8 +54,7 @@ int main() {
     std::cout << v << std::endl;
     int a = v * Vetor(3, 2);
     std::cout << a << std::endl;
-    //Vetor b = v ^ Vetor(-4501, 9002);
-    int  b = v ^ Vetor(-4501, 9002); // aqui o jeito correto para a formatacao
+    int b = v ^ Vetor(-4501, 9002);
     std::cout << b << std::endl;
     double c = v.abs();
     std::cout << c << std::endl;

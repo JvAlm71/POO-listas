@@ -1,9 +1,0 @@
-Traceback (most recent call last):
-  File "tester.py", line 14, in <module>
-  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
-  File "PyInstaller/loader/pyimod02_importers.py", line 378, in exec_module
-  File "gen.py", line 13, in <module>
-IndexError: list index out of range
-[PYI-163:ERROR] Failed to execute script 'tester' due to unhandled exception!
