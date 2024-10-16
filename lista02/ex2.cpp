@@ -37,73 +37,7 @@ public:
     }
 
    
-    friend Fracao operator+(const Fracao &a, const Fracao &b) {
-        long long int numerador = a._numerador * b._denominador + b._numerador * a._denominador;
-        long long int denominador = a._denominador * b._denominador;
-        Fracao resultado(numerador, denominador);
-        resultado.reduz();
-        return resultado;
-    }
-
-   
-    friend Fracao operator-(const Fracao &a, const Fracao &b) {
-        long long int numerador = a._numerador * b._denominador - b._numerador * a._denominador;
-        long long int denominador = a._denominador * b._denominador;
-        Fracao resultado(numerador, denominador);
-        resultado.reduz();
-        return resultado;
-    }
-
-    
-    friend Fracao operator*(const Fracao &a, const Fracao &b) {
-        long long int numerador = a._numerador * b._numerador;
-        long long int denominador = a._denominador * b._denominador;
-        Fracao resultado(numerador, denominador);
-        resultado.reduz();
-        return resultado;
-    }
-
-    
-    friend Fracao operator/(const Fracao &a, const Fracao &b) {
-        long long int numerador = a._numerador * b._denominador;
-        long long int denominador = a._denominador * b._numerador;
-        Fracao resultado(numerador, denominador);
-        resultado.reduz();
-        return resultado;
-    }
-
-    
-    operator double() const {
-        return static_cast<double>(_numerador) / _denominador;
-    }
-
-    friend std::ostream& operator<<(std::ostream &out, const Fracao &f) {
-        if (f._denominador == 1) {
-            out << f._numerador;
-        } else {
-            out << f._numerador << "/" << f._denominador;
-        }
-        return out;
-    }
-};
-
-int main() {
-    Fracao f;
-    std::cout << f << " " << double(f) << '\n';
-    f = Fracao((long long int)1, (long long int)2);
-    std::cout << f << " " << double(f) << '\n';
-    f = f + Fracao((long long int)1, (long long int)1);
-    std::cout << f << " " << double(f) << '\n';
-    f = f + Fracao((long long int)1, (long long int)2);
-    std::cout << f << " " << double(f) << '\n';
-    f = f * Fracao((long long int)3, (long long int)2);
-    std::cout << f << " " << double(f) << '\n';
-    f = f / Fracao((long long int)3, (long long int)4);
-    std::cout << f << " " << double(f) << '\n';
-    f = f - Fracao((long long int)1, (long long int)6);
-    std::cout << f << " " << double(f) << '\n';
-    f = f * Fracao((long long int)0, (long long int)999999999999);
-    std::cout << f << " " << double(f) << '\n';
-
-    return 0;
+operator double() const {
+    return static_cast<double>(_numerador) / _denominador;
 }
+};
