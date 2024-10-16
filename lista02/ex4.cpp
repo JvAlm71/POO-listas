@@ -1,6 +1,6 @@
 #include <iostream>
+#include <random>
 #include <math.h>
-#include <stdlib.h> // para função rand()
 
 class Polinomio2 {
 private:
@@ -10,8 +10,11 @@ public:
     Polinomio2(int a = 0, int b = 0, int c = 0) : _a(a), _b(b), _c(c) {
         if (_a == 0) {
             _a = 1;
-            _b = rand() % 10; // Gera um valor aleatório para _b
-            _c = rand() % 10; // Gera um valor aleatório para _c
+            std::random_device rd;
+            std::mt19937 gen(rd());
+            std::uniform_int_distribution<> dist(0, 9);
+            _b = dist(gen);
+            _c = dist(gen);
         }
     }
 
