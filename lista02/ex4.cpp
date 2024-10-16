@@ -1,6 +1,7 @@
 #include <iostream>
 #include <random>
 #include <math.h>
+#include <stdio.h> // para printf
 
 class Polinomio2 {
 private:
@@ -31,7 +32,7 @@ public:
             resultado[0] = 2; // Duas raízes reais
             double raiz1 = (-_b + sqrt(delta)) / (2.0 * _a);
             double raiz2 = (-_b - sqrt(delta)) / (2.0 * _a);
-            if (raiz1 > raiz2) { // Ajuste para que a maior raiz seja a primeira
+            if (raiz1 < raiz2) {
                 resultado[1] = raiz1;
                 resultado[2] = raiz2;
             } else {
@@ -51,19 +52,13 @@ public:
 int main() {
     double* v;
     
-    Polinomio2 p(-45, 9454, 1305);
-    v = p.raizes();
-    
-    // Configuração da precisão sem <iomanip>
-    std::cout.precision(1);
-    std::cout << std::fixed << v[0] << " ";  // Saída para o número de raízes
-    
-    std::cout.precision(15);
-    // Imprime primeiro a maior raiz, depois a menor, conforme a ordem desejada
-    std::cout << v[1] << " " << v[2] << " ";
-    
-    std::cout.precision(0);
-    std::cout << p(2) << std::endl;  // Valor da função polinomial com precisão 0
+    Polinomio2 p1(-1454, 5891, 44);
+    v = p1.raizes();
+    printf("%.1f ", v[0]); // Primeira saída sem decimais, apenas o número de raízes
+    for (int i = 1; i <= v[0]; i++) {
+        printf("%.15f ", v[i]); // Usando 15 casas decimais para as raízes
+    }
+    printf("%.0f\n", p1(2)); // Valor do polinômio para x = 2, sem casas decimais
 
     return 0;
 }
