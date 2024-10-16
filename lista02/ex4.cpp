@@ -1,6 +1,7 @@
 #include <iostream>
 #include <random>
 #include <math.h>
+#include <stdio.h> // para printf
 
 class Polinomio2 {
 private:
@@ -29,8 +30,15 @@ public:
             resultado[1] = -_b / (2.0 * _a);
         } else {
             resultado[0] = 2; // Duas raízes reais
-            resultado[1] = (-_b + sqrt(delta)) / (2.0 * _a);
-            resultado[2] = (-_b - sqrt(delta)) / (2.0 * _a);
+            double raiz1 = (-_b + sqrt(delta)) / (2.0 * _a);
+            double raiz2 = (-_b - sqrt(delta)) / (2.0 * _a);
+            if (raiz1 < raiz2) {
+                resultado[1] = raiz1;
+                resultado[2] = raiz2;
+            } else {
+                resultado[1] = raiz2;
+                resultado[2] = raiz1;
+            }
         }
 
         return resultado;
@@ -44,20 +52,13 @@ public:
 int main() {
     double* v;
     
-    Polinomio2 p1(1, 1, 1);
+    Polinomio2 p1(-1454, 5891, 44);
     v = p1.raizes();
-    for (int i = 0; i <= v[0]; i++) std::cout << v[i] << " ";
-    std::cout << '\n' << p1(2) << '\n';
-    
-    Polinomio2 p2(1, 2, 1);
-    v = p2.raizes();
-    for (int i = 0; i <= v[0]; i++) std::cout << v[i] << " ";
-    std::cout << '\n' << p2(2) << '\n';
-    
-    Polinomio2 p3(1, -3, 2);
-    v = p3.raizes();
-    for (int i = 0; i <= v[0]; i++) std::cout << v[i] << " ";
-    std::cout << '\n' << p3(2) << '\n';
+    printf("%.1f ", v[0]); 
+    for (int i = 1; i <= v[0]; i++) {
+        printf("%.15f ", v[i]); 
+    }
+    printf("%.0f\n", p1(2)); 
 
     return 0;
 }
