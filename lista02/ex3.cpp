@@ -1,6 +1,7 @@
 #include <iostream>
 #include <math.h> 
 
+
 class Vetor {
 private:
     int _x;
