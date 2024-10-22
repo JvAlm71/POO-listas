@@ -35,8 +35,8 @@ public:
     }
 
     Fracao(double x, double eps = 1e-9) {
-        long long int numerador = static_cast<long long int>(x / eps);
-        long long int denominador = static_cast<long long int>(1.0 / eps);
+        long long int numerador =  static_cast<long long int>(x / eps);
+        long long int denominador =  static_cast<long long int>(1.0 / eps);
         _numerador = numerador;
         _denominador = denominador;
         reduz();
@@ -86,23 +86,23 @@ int main() {
     Fracao f;
     std::cout << f << " " << double(f) << '\n';
     
-    f = f + Fracao(static_cast<long long int>(1), static_cast<long long int>(2));
+    f = f + Fracao(1LL, 2LL);
     std::cout << f << " " << double(f) << '\n';
     
-    f = f + Fracao(static_cast<long long int>(1), static_cast<long long int>(2));
+    f = f + Fracao(1LL, 2LL);
     std::cout << f << " " << double(f) << '\n';
     
-    f = f * Fracao(static_cast<long long int>(3), static_cast<long long int>(2));
+    f = f * Fracao(3LL, 2LL);
     std::cout << f << " " << double(f) << '\n';
     
-    f = f / Fracao(static_cast<long long int>(3), static_cast<long long int>(4));
+    f = f / Fracao(3LL, 4LL);
     std::cout << f << " " << double(f) << '\n';
     
     // Usar casting explícito para garantir o uso correto do construtor
-    f = f - Fracao(static_cast<long long int>(1), static_cast<long long int>(6));
+    f = f - Fracao(1LL, 6LL);
     std::cout << f << " " << double(f) << '\n';
     
-    f = f * Fracao(static_cast<long long int>(0), static_cast<long long int>(999999999999));
+    f = f * Fracao(0LL, 999999999999LL);
     std::cout << f << " " << double(f) << '\n';
 
     return 0;

@@ -33,11 +33,11 @@ public:
             double raiz1 = (-_b + sqrt(delta)) / (2.0 * _a);
             double raiz2 = (-_b - sqrt(delta)) / (2.0 * _a);
             if (raiz1 < raiz2) {
-                resultado[1] = raiz1;
-                resultado[2] = raiz2;
-            } else {
                 resultado[1] = raiz2;
                 resultado[2] = raiz1;
+            } else {
+                resultado[1] = raiz1;
+                resultado[2] = raiz2;
             }
         }
 
@@ -52,7 +52,7 @@ public:
 int main() {
     double* v;
     
-    Polinomio2 p1(-1454, 5891, 44);
+    Polinomio2 p1(-1072, 4485, -539);
     v = p1.raizes();
     printf("%.1f ", v[0]); // Primeira saída sem decimais, apenas o número de raízes
     for (int i = 1; i <= v[0]; i++) {
