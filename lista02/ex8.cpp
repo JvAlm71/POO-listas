@@ -1,5 +1,5 @@
 #include <iostream>
-#include <numeric> 
+#include <string> 
 
 class C {
 private:
@@ -39,10 +39,19 @@ private:
     int _numerador;
     int _denominador;
 
+    int gcd(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+
     void reduz() {
-        int gcd = std::gcd(_numerador, _denominador);
-        _numerador /= gcd;
-        _denominador /= gcd;
+        int divisor = gcd(_numerador, _denominador);
+        _numerador /= divisor;
+        _denominador /= divisor;
         if (_denominador < 0) {
             _numerador = -_numerador;
             _denominador = -_denominador;
@@ -52,9 +61,12 @@ private:
 public:
     Q(int num = 0, int den = 1) : R(static_cast<double>(num) / den), _numerador(num), _denominador(den) {
         if (den == 0) {
-            throw std::invalid_argument("_denominador nao pode ser zero");
+            std::cerr << "Erro: Denominador não pode ser zero" << std::endl;
+            _numerador = 0;
+            _denominador = 1;
+        } else {
+            reduz();
         }
-        reduz();
     }
 
     int getNumerador() const { return _numerador; }
@@ -70,7 +82,7 @@ public:
     Z(int num = 0) : Q(num, 1) {}
 
     void print(std::ostream &out) const override {
-        out << getNumerador();
+        out << "+" << getNumerador();
     }
 };
 
@@ -78,7 +90,8 @@ class N : public Z {
 public:
     N(int num = 0) : Z(num) {
         if (num < 0) {
-            throw std::invalid_argument("num natural nao pode ser negativo");
+            std::cerr << "Erro: Número natural não pode ser negativo" << std::endl;
+            setReal(0);
         }
     }
 };
