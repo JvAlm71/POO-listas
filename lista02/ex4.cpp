@@ -1,7 +1,7 @@
 #include <iostream>
 #include <random>
 #include <math.h>
-#include <stdio.h> // para printf
+#include <stdio.h> 
 
 class Polinomio2 {
 private:
@@ -24,12 +24,12 @@ public:
         double delta = _b * _b - 4 * _a * _c;
 
         if (delta < 0) {
-            resultado[0] = 0; // Sem raízes reais
+            resultado[0] = 0; 
         } else if (delta == 0) {
-            resultado[0] = 1; // Uma raiz real
+            resultado[0] = 1; 
             resultado[1] = -_b / (2.0 * _a);
         } else {
-            resultado[0] = 2; // Duas raízes reais
+            resultado[0] = 2; 
             double raiz1 = (-_b + sqrt(delta)) / (2.0 * _a);
             double raiz2 = (-_b - sqrt(delta)) / (2.0 * _a);
             if (raiz1 < raiz2) {
@@ -54,11 +54,14 @@ int main() {
     
     Polinomio2 p1(-1072, 4485, -539);
     v = p1.raizes();
-    printf("%.1f ", v[0]); // Primeira saída sem decimais, apenas o número de raízes
+    printf("%.1f ", v[0]); 
     for (int i = 1; i <= v[0]; i++) {
-        printf("%.15f ", v[i]); // Usando 15 casas decimais para as raízes
+        printf("%.15f ", v[i]); 
     }
-    printf("%.0f\n", p1(2)); // Valor do polinômio para x = 2, sem casas decimais
+    printf("%.0f\n", p1(2)); 
 
     return 0;
 }
+
+
+// ISSO TA CERTO, PRECISO VER SOBRE FORMATAÇAOOOO!!!!!!!!!

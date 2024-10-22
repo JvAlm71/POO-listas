@@ -31,7 +31,7 @@ public:
         double magnitudes = a.abs() * b.abs();
         if (magnitudes == 0) return 0.0;
         double cosTheta = dotProduct / magnitudes;
-        return acos(cosTheta) * (180.0 / M_PI); // conversão para graus
+        return acos(cosTheta) * (180.0 / M_PI); 
     }
 
     double abs() const {

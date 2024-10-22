@@ -98,7 +98,7 @@ int main() {
     f = f / Fracao(3LL, 4LL);
     std::cout << f << " " << double(f) << '\n';
     
-    // Usar casting explícito para garantir o uso correto do construtor
+    
     f = f - Fracao(1LL, 6LL);
     std::cout << f << " " << double(f) << '\n';
     

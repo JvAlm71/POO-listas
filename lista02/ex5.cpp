@@ -4,34 +4,33 @@
 
 class Arquivo {
 private:
-    std::ifstream conteudo;
+    std::ifstream _conteudo;
 
 public:
-    // Construtor que abre o arquivo
+   
     Arquivo(const std::string& arquivo) {
-        conteudo.open(arquivo);
-        if (!conteudo) {
+        _conteudo.open(arquivo);
+        if (!_conteudo) {
             std::cerr << "Erro ao abrir o arquivo: " << arquivo << std::endl;
         }
     }
 
-    // Método que lê a próxima linha
     std::string proxima_linha() {
-        if (!conteudo.is_open()) {
-            return "."; // Retorna '.' se o arquivo não pôde ser aberto
+        if (!_conteudo.is_open()) {
+            return "."; 
         }
         std::string linha;
-        if (std::getline(conteudo, linha)) {
+        if (std::getline(_conteudo, linha)) {
             return linha;
         } else {
-            return "."; // Retorna '.' se não houver mais linhas
+            return "."; 
         }
     }
 
-    // Destrutor que fecha o arquivo
+   
     ~Arquivo() {
-        if (conteudo.is_open()) {
-            conteudo.close();
+        if (_conteudo.is_open()) {
+            _conteudo.close();
         }
     }
 };
