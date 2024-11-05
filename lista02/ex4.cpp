@@ -1,7 +1,7 @@
 #include <iostream>
 #include <random>
 #include <math.h>
-#include <stdio.h> 
+#include <stdio.h>
 
 class Polinomio2 {
 private:
@@ -20,25 +20,18 @@ public:
     }
 
     double* raizes() {
-        double* resultado = new double[3];
+        static double resultado[3];
         double delta = _b * _b - 4 * _a * _c;
 
         if (delta < 0) {
-            resultado[0] = 0; 
+            resultado[0] = 0; // Nenhuma raiz real
         } else if (delta == 0) {
             resultado[0] = 1; 
             resultado[1] = -_b / (2.0 * _a);
         } else {
             resultado[0] = 2; 
-            double raiz1 = (-_b + sqrt(delta)) / (2.0 * _a);
-            double raiz2 = (-_b - sqrt(delta)) / (2.0 * _a);
-            if (raiz1 < raiz2) {
-                resultado[1] = raiz2;
-                resultado[2] = raiz1;
-            } else {
-                resultado[1] = raiz1;
-                resultado[2] = raiz2;
-            }
+            resultado[1] = (-_b - sqrt(delta)) / (2.0 * _a);
+            resultado[2] = (-_b + sqrt(delta)) / (2.0 * _a);
         }
 
         return resultado;
@@ -50,18 +43,9 @@ public:
 };
 
 int main() {
-    double* v;
-    
-    Polinomio2 p1(-1072, 4485, -539);
-    v = p1.raizes();
-    printf("%.1f ", v[0]); 
-    for (int i = 1; i <= v[0]; i++) {
-        printf("%.15f ", v[i]); 
-    }
-    printf("%.0f\n", p1(2)); 
-
+    Polinomio2 p(189, 5962, 1928);
+    double *v = p.raizes();
+    for(int i=0; i<=v[0]; i++) std::cout << v[i] << " " ;
+    std::cout << p(2) << std::endl;
     return 0;
 }
-
-
-// ISSO TA CERTO, PRECISO VER SOBRE FORMATAÇAOOOO!!!!!!!!!
