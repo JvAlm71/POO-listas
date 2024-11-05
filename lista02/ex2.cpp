@@ -1,5 +1,6 @@
 #include <iostream>
-#include <cmath>
+#include <iomanip>
+#include <stdio.h>
 
 class Fracao {
 private:
@@ -85,6 +86,7 @@ public:
 };
 
 int main() {
+    
     Fracao f(0LL);
     std::cout << f << " " << double(f) << std::endl;
     f = f + Fracao(1LL, 2LL);
