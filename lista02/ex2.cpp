@@ -86,7 +86,7 @@ public:
 };
 
 int main() {
-    
+
     Fracao f(0LL);
     std::cout << f << " " << double(f) << std::endl;
     f = f + Fracao(1LL, 2LL);
@@ -103,3 +103,7 @@ int main() {
     std::cout << f << " " << double(f) << std::endl;
     return 0;
 }
+
+
+
+//abc
