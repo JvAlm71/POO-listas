@@ -7,23 +7,23 @@ const int BASE_DIGITOS = 9;  // Dígitos por parte
 
 class BigInt {
 private:
-    int* partes;
-    int npartes;
-    bool positivo;
+    int* _partes;
+    int _npartes;
+    bool _positivo;
 
 public:
     // Construtor a partir de string
     BigInt(std::string numero) {
-        positivo = true;
+        _positivo = true;
         if (numero.empty()) {
-            npartes = 1;
-            partes = new int[1];
-            partes[0] = 0;
+            _npartes = 1;
+            _partes = new int[1];
+            _partes[0] = 0;
             return;
         }
 
         if (numero[0] == '-') {
-            positivo = false;
+            _positivo = false;
             numero = numero.substr(1);
         }
 
@@ -33,93 +33,93 @@ public:
         }
 
         int len = numero.length();
-        npartes = (len + BASE_DIGITOS - 1) / BASE_DIGITOS;
-        partes = new int[npartes];
+        _npartes = (len + BASE_DIGITOS - 1) / BASE_DIGITOS;
+        _partes = new int[_npartes];
 
         int indice = 0;
         for (int i = len; i > 0; i -= BASE_DIGITOS) {
             int inicio = std::max(0, i - BASE_DIGITOS);
             int tamanho = i - inicio;
-            partes[indice++] = std::stoi(numero.substr(inicio, tamanho));
+            _partes[indice++] = std::stoi(numero.substr(inicio, tamanho));
         }
     }
 
     // Construtor a partir de int
     BigInt(int num, bool eh_num = true) {
         if (eh_num) {
-            positivo = num >= 0;
+            _positivo = num >= 0;
             num = std::abs(num);
 
             if (num == 0) {
-                npartes = 1;
-                partes = new int[1];
-                partes[0] = 0;
+                _npartes = 1;
+                _partes = new int[1];
+                _partes[0] = 0;
             } else {
-                npartes = 0;
+                _npartes = 0;
                 int temp = num;
                 while (temp > 0) {
                     temp /= BASE;
-                    npartes++;
+                    _npartes++;
                 }
 
-                partes = new int[npartes];
+                _partes = new int[_npartes];
                 int indice = 0;
                 while (num > 0) {
-                    partes[indice++] = num % BASE;
+                    _partes[indice++] = num % BASE;
                     num /= BASE;
                 }
             }
         } else {
-            npartes = num;
-            positivo = true;
-            partes = new int[npartes];
-            for (int i = 0; i < npartes; i++) {
-                partes[i] = 0;
+            _npartes = num;
+            _positivo = true;
+            _partes = new int[_npartes];
+            for (int i = 0; i < _npartes; i++) {
+                _partes[i] = 0;
             }
         }
     }
 
     // Construtor padrão
     BigInt() {
-        positivo = true;
-        npartes = 1;
-        partes = new int[1];
-        partes[0] = 0;
+        _positivo = true;
+        _npartes = 1;
+        _partes = new int[1];
+        _partes[0] = 0;
     }
 
     // Construtor de movimento
-    BigInt(BigInt&& b) : partes(b.partes), npartes(b.npartes), positivo(b.positivo) {
-        b.partes = nullptr;
-        b.npartes = 0;
+    BigInt(BigInt&& b) : _partes(b._partes), _npartes(b._npartes), _positivo(b._positivo) {
+        b._partes = nullptr;
+        b._npartes = 0;
     }
 
     // Construtor de cópia
-    BigInt(const BigInt& b) : npartes(b.npartes), positivo(b.positivo) {
-        partes = new int[npartes];
-        for (int i = 0; i < npartes; i++) {
-            partes[i] = b.partes[i];
+    BigInt(const BigInt& b) : _npartes(b._npartes), _positivo(b._positivo) {
+        _partes = new int[_npartes];
+        for (int i = 0; i < _npartes; i++) {
+            _partes[i] = b._partes[i];
         }
     }
 
     // Destrutor
     ~BigInt() {
-        delete[] partes;
+        delete[] _partes;
     }
 
     // Método isPositivo()
     bool isPositivo() const {
-        return positivo;
+        return _positivo;
     }
 
     // Operador de atribuição
     BigInt& operator=(const BigInt& b) {
         if (this != &b) {
-            delete[] partes;
-            npartes = b.npartes;
-            positivo = b.positivo;
-            partes = new int[npartes];
-            for (int i = 0; i < npartes; i++) {
-                partes[i] = b.partes[i];
+            delete[] _partes;
+            _npartes = b._npartes;
+            _positivo = b._positivo;
+            _partes = new int[_npartes];
+            for (int i = 0; i < _npartes; i++) {
+                _partes[i] = b._partes[i];
             }
         }
         return *this;
@@ -128,67 +128,67 @@ public:
     // Método abs()
     BigInt abs() const {
         BigInt resultado(*this);
-        resultado.positivo = true;
+        resultado._positivo = true;
         return resultado;
     }
 
     // Operador ==
     friend bool operator==(const BigInt& a, const BigInt& b) {
-        if (a.positivo != b.positivo) return false;
-        if (a.npartes != b.npartes) return false;
-        for (int i = 0; i < a.npartes; i++) {
-            if (a.partes[i] != b.partes[i]) return false;
+        if (a._positivo != b._positivo) return false;
+        if (a._npartes != b._npartes) return false;
+        for (int i = 0; i < a._npartes; i++) {
+            if (a._partes[i] != b._partes[i]) return false;
         }
         return true;
     }
 
     // Operador >
     friend bool operator>(const BigInt& a, const BigInt& b) {
-        if (a.positivo != b.positivo)
-            return a.positivo;
+        if (a._positivo != b._positivo)
+            return a._positivo;
 
-        if (a.npartes != b.npartes)
-            return a.npartes > b.npartes ? a.positivo : !a.positivo;
+        if (a._npartes != b._npartes)
+            return a._npartes > b._npartes ? a._positivo : !a._positivo;
 
-        for (int i = a.npartes - 1; i >= 0; i--) {
-            if (a.partes[i] != b.partes[i])
-                return a.partes[i] > b.partes[i] ? a.positivo : !a.positivo;
+        for (int i = a._npartes - 1; i >= 0; i--) {
+            if (a._partes[i] != b._partes[i])
+                return a._partes[i] > b._partes[i] ? a._positivo : !a._positivo;
         }
         return false;
     }
 
     // Operador +
     friend BigInt operator+(const BigInt& a, const BigInt& b) {
-        if (a.positivo == b.positivo) {
+        if (a._positivo == b._positivo) {
             BigInt resultado;
-            resultado.positivo = a.positivo;
-            int maxPartes = std::max(a.npartes, b.npartes) + 1;
-            resultado.partes = new int[maxPartes];
+            resultado._positivo = a._positivo;
+            int maxPartes = std::max(a._npartes, b._npartes) + 1;
+            resultado._partes = new int[maxPartes];
             for (int i = 0; i < maxPartes; i++) {
-                resultado.partes[i] = 0;
+                resultado._partes[i] = 0;
             }
-            resultado.npartes = maxPartes;
+            resultado._npartes = maxPartes;
 
             int carry = 0;
             for (int i = 0; i < maxPartes - 1; i++) {
                 long long soma = carry;
-                if (i < a.npartes) soma += a.partes[i];
-                if (i < b.npartes) soma += b.partes[i];
+                if (i < a._npartes) soma += a._partes[i];
+                if (i < b._npartes) soma += b._partes[i];
                 if (soma >= BASE) {
                     carry = 1;
                     soma -= BASE;
                 } else {
                     carry = 0;
                 }
-                resultado.partes[i] = soma;
+                resultado._partes[i] = soma;
             }
             if (carry == 0) {
-                resultado.npartes--;
+                resultado._npartes--;
             } else {
-                resultado.partes[maxPartes - 1] = carry;
+                resultado._partes[maxPartes - 1] = carry;
             }
             return resultado;
-        } else if (a.positivo && !b.positivo) {
+        } else if (a._positivo && !b._positivo) {
             return a - b.abs();
         } else {
             return b - a.abs();
@@ -197,42 +197,42 @@ public:
 
     // Operador -
     friend BigInt operator-(const BigInt& a, const BigInt& b) {
-        if (a.positivo == b.positivo) {
+        if (a._positivo == b._positivo) {
             if (a.abs() >= b.abs()) {
                 BigInt resultado;
-                resultado.positivo = a.positivo;
-                resultado.npartes = a.npartes;
-                resultado.partes = new int[resultado.npartes];
-                for (int i = 0; i < resultado.npartes; i++) {
-                    resultado.partes[i] = 0;
+                resultado._positivo = a._positivo;
+                resultado._npartes = a._npartes;
+                resultado._partes = new int[resultado._npartes];
+                for (int i = 0; i < resultado._npartes; i++) {
+                    resultado._partes[i] = 0;
                 }
 
                 int carry = 0;
-                for (int i = 0; i < a.npartes; i++) {
-                    long long sub = a.partes[i] - carry - (i < b.npartes ? b.partes[i] : 0);
+                for (int i = 0; i < a._npartes; i++) {
+                    long long sub = a._partes[i] - carry - (i < b._npartes ? b._partes[i] : 0);
                     if (sub < 0) {
                         sub += BASE;
                         carry = 1;
                     } else {
                         carry = 0;
                     }
-                    resultado.partes[i] = sub;
+                    resultado._partes[i] = sub;
                 }
 
-                while (resultado.npartes > 1 && resultado.partes[resultado.npartes - 1] == 0) {
-                    resultado.npartes--;
+                while (resultado._npartes > 1 && resultado._partes[resultado._npartes - 1] == 0) {
+                    resultado._npartes--;
                 }
                 return resultado;
             } else {
                 BigInt resultado = b - a;
-                resultado.positivo = !a.positivo;
+                resultado._positivo = !a._positivo;
                 return resultado;
             }
-        } else if (a.positivo && !b.positivo) {
+        } else if (a._positivo && !b._positivo) {
             return a + b.abs();
         } else {
             BigInt resultado = a.abs() + b;
-            resultado.positivo = false;
+            resultado._positivo = false;
             return resultado;
         }
     }
@@ -241,7 +241,7 @@ public:
     BigInt operator-() const {
         BigInt resultado(*this);
         if (resultado != BigInt(0)) {
-            resultado.positivo = !resultado.positivo;
+            resultado._positivo = !resultado._positivo;
         }
         return resultado;
     }
@@ -249,25 +249,25 @@ public:
     // Operador *
     friend BigInt operator*(const BigInt& a, const BigInt& b) {
         BigInt resultado;
-        resultado.positivo = (a.positivo == b.positivo);
-        resultado.npartes = a.npartes + b.npartes;
-        resultado.partes = new int[resultado.npartes];
-        for (int i = 0; i < resultado.npartes; i++) {
-            resultado.partes[i] = 0;
+        resultado._positivo = (a._positivo == b._positivo);
+        resultado._npartes = a._npartes + b._npartes;
+        resultado._partes = new int[resultado._npartes];
+        for (int i = 0; i < resultado._npartes; i++) {
+            resultado._partes[i] = 0;
         }
 
-        for (int i = 0; i < a.npartes; i++) {
+        for (int i = 0; i < a._npartes; i++) {
             long long carry = 0;
-            for (int j = 0; j < b.npartes || carry != 0; j++) {
-                long long atual = resultado.partes[i + j] + carry +
-                    (long long)a.partes[i] * (j < b.npartes ? b.partes[j] : 0);
-                resultado.partes[i + j] = atual % BASE;
+            for (int j = 0; j < b._npartes || carry != 0; j++) {
+                long long atual = resultado._partes[i + j] + carry +
+                    (long long)a._partes[i] * (j < b._npartes ? b._partes[j] : 0);
+                resultado._partes[i + j] = atual % BASE;
                 carry = atual / BASE;
             }
         }
 
-        while (resultado.npartes > 1 && resultado.partes[resultado.npartes - 1] == 0) {
-            resultado.npartes--;
+        while (resultado._npartes > 1 && resultado._partes[resultado._npartes - 1] == 0) {
+            resultado._npartes--;
         }
         return resultado;
     }
@@ -275,36 +275,36 @@ public:
     // Operador /(int)
     BigInt operator/(int b) const {
         BigInt resultado;
-        resultado.positivo = (positivo == (b >= 0));
+        resultado._positivo = (_positivo == (b >= 0));
         int divisor = std::abs(b);
 
-        resultado.npartes = npartes;
-        resultado.partes = new int[resultado.npartes];
-        for (int i = 0; i < resultado.npartes; i++) {
-            resultado.partes[i] = 0;
+        resultado._npartes = _npartes;
+        resultado._partes = new int[resultado._npartes];
+        for (int i = 0; i < resultado._npartes; i++) {
+            resultado._partes[i] = 0;
         }
 
         long long resto = 0;
-        for (int i = npartes - 1; i >= 0; i--) {
-            long long atual = partes[i] + resto * BASE;
-            resultado.partes[i] = atual / divisor;
+        for (int i = _npartes - 1; i >= 0; i--) {
+            long long atual = _partes[i] + resto * BASE;
+            resultado._partes[i] = atual / divisor;
             resto = atual % divisor;
         }
 
-        while (resultado.npartes > 1 && resultado.partes[resultado.npartes - 1] == 0) {
-            resultado.npartes--;
+        while (resultado._npartes > 1 && resultado._partes[resultado._npartes - 1] == 0) {
+            resultado._npartes--;
         }
         return resultado;
     }
 
     // Operador <<
     friend std::ostream& operator<<(std::ostream &out, const BigInt &a) {
-        if (!a.positivo && !(a.npartes == 1 && a.partes[0] == 0)) {
+        if (!a._positivo && !(a._npartes == 1 && a._partes[0] == 0)) {
             out << '-';
         }
-        out << a.partes[a.npartes - 1];
-        for (int i = a.npartes - 2; i >= 0; i--) {
-            out << std::setw(BASE_DIGITOS) << std::setfill('0') << a.partes[i];
+        out << a._partes[a._npartes - 1];
+        for (int i = a._npartes - 2; i >= 0; i--) {
+            out << std::setw(BASE_DIGITOS) << std::setfill('0') << a._partes[i];
         }
         return out;
     }
