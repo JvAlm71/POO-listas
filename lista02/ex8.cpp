@@ -82,7 +82,7 @@ public:
     Z(int num = 0) : Q(num, 1) {}
 
     void print(std::ostream &out) const override {
-        out << getNumerador();
+        out << "+" << getNumerador();
     }
 };
 
