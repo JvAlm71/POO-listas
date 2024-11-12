@@ -1,0 +1,267 @@
+Versão do G++:
+g++ (Debian 12.2.0-14) 12.2.0
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Varificando data de envio...
+AGORA: 2024-11-12 15:35:32.405302-03:00
+PRAZO MÁXIMO: 2024-11-13 23:59:59-03:06
+Testando sua solucao...
+Procurando exercício 1...
+Exercício 1...
+Compilando...
+g++ -O2 -Wno-unused-result  "ex1.cpp"  > comp.log 2>&1
+Teste 1: correto! +0.050
+Teste 2: correto! +0.050
+Teste 3: correto! +0.050
+Teste 4: correto! +0.050
+Teste 5: correto! +0.050
+Teste 6: correto! +0.050
+Teste 7: correto! +0.050
+Teste 8: correto! +0.050
+Teste 9: correto! +0.050
+Teste 10: correto! +0.050
+Teste 11: correto! +0.050
+Teste 12: correto! +0.050
+Teste 13: correto! +0.050
+Teste 14: correto! +0.050
+Teste 15: correto! +0.050
+Teste 16: correto! +0.050
+Teste 17: correto! +0.050
+Teste 18: correto! +0.050
+Teste 19: correto! +0.050
+Teste 20: correto! +0.050
+Nota exercicio 1: 1.0
+Procurando exercício 2...
+Exercício 2...
+Compilando...
+g++ -O2 -Wno-unused-result  "ex2.cpp"  > comp.log 2>&1
+Teste 1: correto! +0.050
+Teste 2: correto! +0.050
+Teste 3: correto! +0.050
+Teste 4: correto! +0.050
+Teste 5: correto! +0.050
+Teste 6: correto! +0.050
+Teste 7: correto! +0.050
+Teste 8: correto! +0.050
+Teste 9: correto! +0.050
+Teste 10: correto! +0.050
+Teste 11: correto! +0.050
+Teste 12: correto! +0.050
+Teste 13: correto! +0.050
+Teste 14: correto! +0.050
+Teste 15: correto! +0.050
+Teste 16: correto! +0.050
+Teste 17: correto! +0.050
+Teste 18: correto! +0.050
+Teste 19: correto! +0.050
+Teste 20: correto! +0.050
+Nota exercicio 2: 1.0
+Procurando exercício 3...
+Exercício 3...
+Compilando...
+g++ -O2 -Wno-unused-result  "ex3.cpp"  > comp.log 2>&1
+Teste 1: correto! +0.050
+Teste 2 deu errado! +0.047
+O resultado para
+#include<iostream>
+int main() {
+    Vetor v(-83, 53);
+    std::cout << (v ^ Vetor(-12,92)) << std::endl;
+    v = v + Vetor(-61, 55);
+    std::cout << v.abs() << std::endl;
+    std::cout << v << std::endl;
+    std::cout << (v ^ Vetor(-79,100)) << std::endl;
+    std::cout << (v * Vetor(-34,-32)) << std::endl;
+    v = v - Vetor(-38, -57);
+    v = v + Vetor(55, 57);
+    std::cout << v.abs() << std::endl;
+    std::cout << (v * Vetor(-66,-34)) << std::endl;
+    v = v + Vetor(-78, 17);
+    v = v - Vetor(93, -44);
+    std::cout << v.abs() << std::endl;
+    v = v - Vetor(49, 84);
+    std::cout << v << std::endl;
+    std::cout << (v < Vetor(75,49)) << std::endl;
+    std::cout << v.abs() << std::endl;
+    v = v - Vetor(48, 26);
+    v = v + Vetor(83, 98);
+    std::cout << v << std::endl;
+    std::cout << (v < Vetor(-46,-96)) << std::endl;
+    std::cout << (v * Vetor(75,76)) << std::endl;
+    v = v + Vetor(53, 42);
+    std::cout << v.abs() << std::endl;
+    std::cout << (v ^ Vetor(0,27)) << std::endl;
+    std::cout << (v < Vetor(-71,-35)) << std::endl;
+    std::cout << (v * Vetor(-41,-70)) << std::endl;
+    v = v - Vetor(-4, -4);
+    return 0;
+}
+deveria ser
+-7000
+180.0
+(-144,108)
+-5868
+1440
+227.7827912727386
+-4182
+359.6845840455218
+(-271,199)
+110.55159253733274
+336.21719170797917
+(-236,271)
+113.34687708952468
+2896
+362.5713722841339
+-4941
+85.9280376020948
+-14407
+
+mas deu
+-7000
+180
+(-144, 108)
+-5868
+1440
+227.783
+-4182
+359.685
+(-271, 199)
+110.552
+336.217
+(-236, 271)
+113.347
+2896
+362.571
+-4941
+85.928
+-14407
+
+Teste 3: correto! +0.050
+Teste 4: correto! +0.050
+Teste 5: correto! +0.050
+Teste 6: correto! +0.050
+Teste 7: correto! +0.050
+Teste 8: correto! +0.050
+Teste 9: correto! +0.050
+Teste 10: correto! +0.050
+Teste 11: correto! +0.050
+Teste 12: correto! +0.050
+Teste 13: correto! +0.050
+Teste 14: correto! +0.050
+Teste 15 deu errado! +0.043
+O resultado para
+#include<iostream>
+int main() {
+    Vetor v(-1, 3);
+    std::cout << v << std::endl;
+    v = v + Vetor(1,2);
+    std::cout << v << std::endl;
+    v = v + Vetor(1,2);
+    std::cout << v << std::endl;
+    v = v - Vetor(1,6);
+    std::cout << v << std::endl;
+    std::cout << v * Vetor(3, 2) << std::endl; 
+    std::cout << (v ^ Vetor(-4501,9002)) << std::endl;
+    std::cout << v.abs() << std::endl;
+    return 0;
+}
+
+deveria ser
+(-1,3)
+(0,5)
+(1,7)
+(0,1)
+2
+4501
+1.0
+mas deu
+(-1, 3)
+(0, 5)
+(1, 7)
+(0, 1)
+2
+4501
+1
+
+Teste 16: correto! +0.050
+Teste 17: correto! +0.050
+Teste 18: correto! +0.050
+Teste 19: correto! +0.050
+Teste 20: correto! +0.050
+Nota exercicio 3: 1.0
+Procurando exercício 4...
+Exercício 4...
+Compilando...
+g++ -O2 -Wno-unused-result  "ex4.cpp"  > comp.log 2>&1
+Teste 1: correto! +0.050
+Teste 2: correto! +0.050
+Teste 3: correto! +0.050
+Teste 4: correto! +0.050
+Teste 5: correto! +0.050
+Teste 6: correto! +0.050
+Teste 7: correto! +0.050
+Teste 8: correto! +0.050
+Teste 9: correto! +0.050
+Teste 10: correto! +0.050
+Teste 11: correto! +0.050
+Teste 12: correto! +0.050
+Teste 13 deu errado! +0.012
+O resultado para
+#include<iostream>
+int main() {
+    for(int i=0; i<100; i++) {
+        Polinomio2 p(0, 367164301, -535307574);
+        std::cout << p(2) << " ";
+    }
+    return 0;
+}
+deveria ser
+RANDOM 100
+mas deu
+24 23 24 16 13 23 25 21 16 13 13 28 19 26 16 14 17 10 18 20 15 29 29 25 16 20 14 16 27 16 17 21 10 16 15 18 15 17 25 28 21 23 11 21 25 14 28 9 21 28 24 17 28 13 8 5 13 21 15 21 23 23 23 29 28 16 18 11 27 16 19 25 11 14 19 17 11 30 18 16 12 19 12 17 30 15 8 9 8 20 22 9 13 20 17 30 27 18 15 18 
+Teste 14: correto! +0.050
+Teste 15: correto! +0.050
+Teste 16: correto! +0.050
+Teste 17: correto! +0.050
+Teste 18: correto! +0.050
+Teste 19: correto! +0.050
+Teste 20: correto! +0.050
+Nota exercicio 4: 1.0
+Procurando exercício 5...
+Exercício 5...
+Compilando...
+g++ -O2 -Wno-unused-result  "ex5.cpp"  > comp.log 2>&1
+Teste 1: correto! +0.050
+Teste 2: correto! +0.050
+Teste 3: correto! +0.050
+Teste 4: correto! +0.050
+Teste 5: correto! +0.050
+Teste 6: correto! +0.050
+Teste 7: correto! +0.050
+Teste 8: correto! +0.050
+Teste 9: correto! +0.050
+Teste 10: correto! +0.050
+Teste 11: correto! +0.050
+Teste 12: correto! +0.050
+Teste 13: correto! +0.050
+Teste 14: correto! +0.050
+Teste 15: correto! +0.050
+Teste 16: correto! +0.050
+Teste 17: correto! +0.050
+Teste 18: correto! +0.050
+Teste 19: correto! +0.050
+Teste 20: correto! +0.050
+Nota exercicio 5: 1.0
+Procurando exercício 6...
+Exercício 6...
+ERRO: A classe deve ter somente os seguintes atributos: _positivo, _npartes, _partes
+Nota exercicio 6: 0.0
+Procurando exercício 7...
+Exercício 7...
+ERRO: A classe deve ter somente os seguintes métodos: Fracao
+Nota exercicio 7: 0.0
+Procurando exercício 8...
+Nota total: 5.00
+{"scores": {"ex1": 1.0, "ex2": 1.0, "ex3": 1.0, "ex4": 1.0, "ex5": 1.0, "ex6": 0.0, "ex7": 0.0, "ex8": 0.0}}
