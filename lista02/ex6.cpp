@@ -1,16 +1,15 @@
 #include <iostream>
 #include <string>
-#include <cstring>
 #include <iomanip>
+
+const int BASE = 1000000000; // Base 10^9
+const int BASE_DIGITOS = 9;  // Dígitos por parte
 
 class BigInt {
 private:
     int* partes;
     int npartes;
     bool positivo;
-
-    static const int BASE = 1000000000; // Base 10^9
-    static const int BASE_DIGITOS = 9;  // Dígitos por parte
 
 public:
     // Construtor a partir de string
@@ -97,7 +96,9 @@ public:
     // Construtor de cópia
     BigInt(const BigInt& b) : npartes(b.npartes), positivo(b.positivo) {
         partes = new int[npartes];
-        std::memcpy(partes, b.partes, npartes * sizeof(int));
+        for (int i = 0; i < npartes; i++) {
+            partes[i] = b.partes[i];
+        }
     }
 
     // Destrutor
@@ -117,7 +118,9 @@ public:
             npartes = b.npartes;
             positivo = b.positivo;
             partes = new int[npartes];
-            std::memcpy(partes, b.partes, npartes * sizeof(int));
+            for (int i = 0; i < npartes; i++) {
+                partes[i] = b.partes[i];
+            }
         }
         return *this;
     }
@@ -161,7 +164,9 @@ public:
             resultado.positivo = a.positivo;
             int maxPartes = std::max(a.npartes, b.npartes) + 1;
             resultado.partes = new int[maxPartes];
-            std::memset(resultado.partes, 0, sizeof(int) * maxPartes);
+            for (int i = 0; i < maxPartes; i++) {
+                resultado.partes[i] = 0;
+            }
             resultado.npartes = maxPartes;
 
             int carry = 0;
@@ -169,9 +174,9 @@ public:
                 long long soma = carry;
                 if (i < a.npartes) soma += a.partes[i];
                 if (i < b.npartes) soma += b.partes[i];
-                if (soma >= BigInt::BASE) {
+                if (soma >= BASE) {
                     carry = 1;
-                    soma -= BigInt::BASE;
+                    soma -= BASE;
                 } else {
                     carry = 0;
                 }
@@ -198,13 +203,15 @@ public:
                 resultado.positivo = a.positivo;
                 resultado.npartes = a.npartes;
                 resultado.partes = new int[resultado.npartes];
-                std::memset(resultado.partes, 0, sizeof(int) * resultado.npartes);
+                for (int i = 0; i < resultado.npartes; i++) {
+                    resultado.partes[i] = 0;
+                }
 
                 int carry = 0;
                 for (int i = 0; i < a.npartes; i++) {
                     long long sub = a.partes[i] - carry - (i < b.npartes ? b.partes[i] : 0);
                     if (sub < 0) {
-                        sub += BigInt::BASE;
+                        sub += BASE;
                         carry = 1;
                     } else {
                         carry = 0;
@@ -245,15 +252,17 @@ public:
         resultado.positivo = (a.positivo == b.positivo);
         resultado.npartes = a.npartes + b.npartes;
         resultado.partes = new int[resultado.npartes];
-        std::memset(resultado.partes, 0, sizeof(int) * resultado.npartes);
+        for (int i = 0; i < resultado.npartes; i++) {
+            resultado.partes[i] = 0;
+        }
 
         for (int i = 0; i < a.npartes; i++) {
             long long carry = 0;
             for (int j = 0; j < b.npartes || carry != 0; j++) {
                 long long atual = resultado.partes[i + j] + carry +
                     (long long)a.partes[i] * (j < b.npartes ? b.partes[j] : 0);
-                resultado.partes[i + j] = atual % BigInt::BASE;
-                carry = atual / BigInt::BASE;
+                resultado.partes[i + j] = atual % BASE;
+                carry = atual / BASE;
             }
         }
 
@@ -271,112 +280,19 @@ public:
 
         resultado.npartes = npartes;
         resultado.partes = new int[resultado.npartes];
-        std::memset(resultado.partes, 0, sizeof(int) * resultado.npartes);
+        for (int i = 0; i < resultado.npartes; i++) {
+            resultado.partes[i] = 0;
+        }
 
         long long resto = 0;
         for (int i = npartes - 1; i >= 0; i--) {
-            long long atual = partes[i] + resto * BigInt::BASE;
+            long long atual = partes[i] + resto * BASE;
             resultado.partes[i] = atual / divisor;
             resto = atual % divisor;
         }
 
         while (resultado.npartes > 1 && resultado.partes[resultado.npartes - 1] == 0) {
             resultado.npartes--;
-        }
-        return resultado;
-    }
-
-    // Operador /(BigInt)
-    BigInt operator/(const BigInt& b) const {
-        return divmod(b).first;
-    }
-
-    // Operador %(BigInt)
-    BigInt operator%(const BigInt& b) const {
-        return divmod(b).second;
-    }
-
-    // Divisão e módulo simultâneos
-    std::pair<BigInt, BigInt> divmod(const BigInt& b) const {
-        BigInt divisor = b.abs();
-        BigInt dividendo = this->abs();
-        BigInt quociente(0);
-        BigInt resto(0);
-
-        if (dividendo < divisor) {
-            resto = dividendo;
-            return { quociente, resto };
-        }
-
-        int n = dividendo.npartes - 1;
-        resto.partes = new int[dividendo.npartes];
-        resto.npartes = 0;
-
-        for (int i = n; i >= 0; i--) {
-            // Shift resto à esquerda e adiciona a parte atual
-            if (resto.npartes > 0 || dividendo.partes[i] != 0) {
-                for (int j = resto.npartes - 1; j >= 0; j--) {
-                    resto.partes[j + 1] = resto.partes[j];
-                }
-                resto.npartes++;
-            }
-            resto.partes[0] = dividendo.partes[i];
-
-            // Busca binária para encontrar o maior x tal que divisor * x <= resto
-            int x = 0, l = 0, r = BigInt::BASE - 1;
-            while (l <= r) {
-                int m = (l + r) / 2;
-                BigInt t = divisor * m;
-                if (t <= resto) {
-                    x = m;
-                    l = m + 1;
-                } else {
-                    r = m - 1;
-                }
-            }
-
-            // Atualiza o quociente
-            if (quociente.npartes > 0 || x != 0) {
-                for (int j = quociente.npartes - 1; j >= 0; j--) {
-                    quociente.partes[j + 1] = quociente.partes[j];
-                }
-                quociente.npartes++;
-                quociente.partes[0] = x;
-            }
-
-            // Atualiza o resto
-            BigInt subtrahend = divisor * x;
-            resto = resto - subtrahend;
-
-            // Remove zeros à esquerda do resto
-            while (resto.npartes > 1 && resto.partes[resto.npartes - 1] == 0) {
-                resto.npartes--;
-            }
-        }
-
-        quociente.positivo = (this->positivo == b.positivo);
-        resto.positivo = this->positivo;
-
-        // Remove zeros à esquerda do quociente
-        while (quociente.npartes > 1 && quociente.partes[quociente.npartes - 1] == 0) {
-            quociente.npartes--;
-        }
-
-        return { quociente, resto };
-    }
-
-    // Operador ^
-    friend BigInt operator^(const BigInt& a, const BigInt& b) {
-        BigInt resultado(1);
-        BigInt base = a;
-        BigInt expoente = b;
-
-        while (expoente > BigInt(0)) {
-            if (expoente.partes[0] % 2 != 0) {
-                resultado = resultado * base;
-            }
-            base = base * base;
-            expoente = expoente / 2;
         }
         return resultado;
     }
@@ -388,7 +304,7 @@ public:
         }
         out << a.partes[a.npartes - 1];
         for (int i = a.npartes - 2; i >= 0; i--) {
-            out << std::setw(BigInt::BASE_DIGITOS) << std::setfill('0') << a.partes[i];
+            out << std::setw(BASE_DIGITOS) << std::setfill('0') << a.partes[i];
         }
         return out;
     }
@@ -416,60 +332,37 @@ private:
     BigInt numerador;
     BigInt denominador;
 
-    void simplificar() {
-        BigInt divisor = mdc(numerador.abs(), denominador.abs());
-        numerador = numerador / divisor;
-        denominador = denominador / divisor;
-
-        if (denominador < BigInt(0)) {
-            denominador = -denominador;
-            numerador = -numerador;
-        }
-    }
-
-    BigInt mdc(BigInt a, BigInt b) {
-        while (b != BigInt(0)) {
-            BigInt resto = a % b;
-            a = b;
-            b = resto;
-        }
-        return a;
-    }
-
 public:
     // Construtor padrão
-    Fracao() : numerador(0), denominador(1) {}
-
-    // Construtor com BigInts
-    Fracao(const BigInt& num, const BigInt& den) : numerador(num), denominador(den) {
-        simplificar();
+    Fracao(BigInt num = 0, BigInt den = 1) : numerador(num), denominador(den) {
+        // Não simplificar
     }
 
     // Operador +
-    Fracao operator+(const Fracao& outra) const {
-        BigInt num = numerador * outra.denominador + outra.numerador * denominador;
-        BigInt den = denominador * outra.denominador;
+    friend Fracao operator+(const Fracao& a, const Fracao& b) {
+        BigInt num = a.numerador * b.denominador + b.numerador * a.denominador;
+        BigInt den = a.denominador * b.denominador;
         return Fracao(num, den);
     }
 
     // Operador -
-    Fracao operator-(const Fracao& outra) const {
-        BigInt num = numerador * outra.denominador - outra.numerador * denominador;
-        BigInt den = denominador * outra.denominador;
+    friend Fracao operator-(const Fracao& a, const Fracao& b) {
+        BigInt num = a.numerador * b.denominador - b.numerador * a.denominador;
+        BigInt den = a.denominador * b.denominador;
         return Fracao(num, den);
     }
 
     // Operador *
-    Fracao operator*(const Fracao& outra) const {
-        BigInt num = numerador * outra.numerador;
-        BigInt den = denominador * outra.denominador;
+    friend Fracao operator*(const Fracao& a, const Fracao& b) {
+        BigInt num = a.numerador * b.numerador;
+        BigInt den = a.denominador * b.denominador;
         return Fracao(num, den);
     }
 
     // Operador /
-    Fracao operator/(const Fracao& outra) const {
-        BigInt num = numerador * outra.denominador;
-        BigInt den = denominador * outra.numerador;
+    friend Fracao operator/(const Fracao& a, const Fracao& b) {
+        BigInt num = a.numerador * b.denominador;
+        BigInt den = a.denominador * b.numerador;
         return Fracao(num, den);
     }
 
