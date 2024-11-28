@@ -1,0 +1,1984 @@
+Versão do G++:
+g++ (Debian 12.2.0-14) 12.2.0
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Varificando data de envio...
+AGORA: 2024-11-28 10:01:18.595448-03:00
+PRAZO MÁXIMO: 2024-12-13 23:59:59-03:06
+Testando sua solucao...
+Procurando exercício 1...
+Exercício 1...
+Criando testes aleatórios...
+Testes Criados!
+Compilando...
+g++ -O2 -Wno-unused-result  "ex1.cpp" 
+Teste 1: correto! +0.050
+Teste 2: correto! +0.050
+Teste 3: correto! +0.050
+Teste 4: correto! +0.050
+Teste 5: correto! +0.050
+Teste 6: correto! +0.050
+Teste 7: correto! +0.050
+Teste 8: correto! +0.050
+Teste 9: correto! +0.050
+Teste 10: correto! +0.050
+Teste 11: correto! +0.050
+Teste 12: correto! +0.050
+Teste 13: correto! +0.050
+Teste 14: correto! +0.050
+Teste 15: correto! +0.050
+Teste 16: correto! +0.050
+Teste 17: correto! +0.050
+Teste 18: correto! +0.050
+Teste 19: correto! +0.050
+Teste 20: correto! +0.050
+Nota exercicio 1: 1.0
+Procurando exercício 2...
+Exercício 2...
+Criando testes aleatórios...
+Testes Criados!
+Compilando...
+g++ -O2 -Wno-unused-result  "ex2.cpp" 
+Teste 1: correto! +0.050
+Teste 2 deu errado!
+O resultado para
+#include<stdio.h>
+int main() {
+    std::stack<int> c;
+    std::queue<std::string> j;
+    c.push(12);
+    c.push(7);
+    c.push(12);
+    c.push(7);
+    c.push(6);
+    c.push(9);
+    c.push(5);
+    c.push(10);
+    c.push(10);
+    c.push(4);
+    c.push(8);
+    c.push(13);
+    c.push(5);
+    c.push(11);
+    c.push(6);
+    c.push(2);
+    c.push(2);
+    c.push(10);
+    c.push(10);
+    c.push(15);
+    c.push(15);
+    c.push(15);
+    c.push(5);
+    c.push(1);
+    c.push(9);
+    c.push(14);
+    c.push(5);
+    c.push(8);
+    c.push(10);
+    c.push(7);
+    c.push(13);
+    c.push(9);
+    c.push(1);
+    c.push(6);
+    c.push(10);
+    c.push(8);
+    c.push(2);
+    c.push(9);
+    c.push(14);
+    c.push(11);
+    c.push(6);
+    c.push(6);
+    c.push(10);
+    c.push(2);
+    c.push(13);
+    c.push(10);
+    c.push(13);
+    c.push(8);
+    c.push(7);
+    c.push(7);
+    c.push(13);
+    c.push(3);
+    c.push(1);
+    c.push(8);
+    c.push(15);
+    c.push(1);
+    c.push(15);
+    c.push(13);
+    c.push(15);
+    c.push(8);
+    c.push(6);
+    c.push(11);
+    c.push(2);
+    c.push(5);
+    c.push(14);
+    c.push(6);
+    c.push(3);
+    c.push(14);
+    c.push(12);
+    c.push(6);
+    c.push(8);
+    c.push(1);
+    c.push(13);
+    c.push(7);
+    c.push(7);
+    c.push(12);
+    c.push(15);
+    c.push(12);
+    c.push(7);
+    c.push(14);
+    c.push(14);
+    c.push(3);
+    c.push(11);
+    c.push(4);
+    c.push(1);
+    c.push(15);
+    c.push(10);
+    c.push(3);
+    c.push(8);
+    c.push(6);
+    c.push(13);
+    c.push(9);
+    c.push(1);
+    c.push(14);
+    j.push("kevin");
+    j.push("fernando");
+    j.push("maria");
+    j.push("anthony");
+    j.push("ana");
+    j.push("yan");
+    j.push("mirella");
+    j.push("dr.");
+    j.push("sra.");
+    j.push("eloá");
+    j.push("luan");
+    j.push("alexandre");
+    j.push("beatriz");
+    j.push("emilly");
+    j.push("sr.");
+    j.push("joão");
+    std::cout << jogo(c, j) << std::endl;
+    return 0;
+}
+
+deveria ser
+mirella
+mas deu
+beatriz
+
+Teste 3 deu errado!
+O resultado para
+#include<stdio.h>
+int main() {
+    std::stack<int> c;
+    std::queue<std::string> j;
+    c.push(2);
+    c.push(10);
+    c.push(4);
+    c.push(13);
+    c.push(14);
+    c.push(11);
+    c.push(3);
+    c.push(4);
+    c.push(7);
+    c.push(8);
+    c.push(13);
+    c.push(15);
+    c.push(10);
+    c.push(5);
+    c.push(12);
+    c.push(8);
+    c.push(1);
+    c.push(1);
+    c.push(4);
+    c.push(10);
+    c.push(15);
+    c.push(13);
+    c.push(12);
+    c.push(2);
+    c.push(8);
+    c.push(6);
+    c.push(15);
+    c.push(14);
+    c.push(1);
+    c.push(2);
+    c.push(14);
+    c.push(14);
+    c.push(4);
+    c.push(5);
+    c.push(4);
+    c.push(13);
+    c.push(12);
+    c.push(1);
+    c.push(14);
+    c.push(13);
+    c.push(7);
+    c.push(5);
+    c.push(7);
+    c.push(3);
+    c.push(15);
+    c.push(13);
+    c.push(14);
+    c.push(7);
+    c.push(13);
+    c.push(1);
+    c.push(9);
+    c.push(12);
+    c.push(2);
+    c.push(14);
+    c.push(9);
+    c.push(3);
+    c.push(14);
+    c.push(8);
+    c.push(12);
+    c.push(9);
+    c.push(1);
+    c.push(9);
+    c.push(12);
+    c.push(3);
+    j.push("srta.");
+    j.push("sr.");
+    j.push("beatriz");
+    j.push("alexia");
+    j.push("mariah");
+    j.push("dra.");
+    j.push("anna");
+    j.push("mathias");
+    j.push("vitor");
+    j.push("valentina");
+    j.push("clara");
+    std::cout << jogo(c, j) << std::endl;
+    return 0;
+}
+
+deveria ser
+beatriz
+mas deu
+anna
+
+Teste 4 deu errado!
+O resultado para
+#include<stdio.h>
+int main() {
+    std::stack<int> c;
+    std::queue<std::string> j;
+    c.push(12);
+    c.push(4);
+    c.push(1);
+    c.push(15);
+    c.push(8);
+    c.push(5);
+    c.push(15);
+    c.push(1);
+    c.push(6);
+    c.push(9);
+    c.push(5);
+    c.push(9);
+    c.push(7);
+    c.push(9);
+    c.push(12);
+    c.push(15);
+    c.push(5);
+    c.push(7);
+    c.push(1);
+    c.push(15);
+    c.push(8);
+    c.push(11);
+    c.push(12);
+    c.push(4);
+    c.push(2);
+    c.push(6);
+    c.push(7);
+    c.push(14);
+    c.push(15);
+    c.push(1);
+    c.push(9);
+    c.push(15);
+    c.push(7);
+    c.push(13);
+    c.push(14);
+    c.push(5);
+    c.push(6);
+    c.push(13);
+    c.push(10);
+    c.push(3);
+    c.push(6);
+    c.push(15);
+    c.push(12);
+    c.push(7);
+    c.push(15);
+    c.push(10);
+    c.push(9);
+    c.push(4);
+    c.push(11);
+    c.push(7);
+    c.push(15);
+    c.push(8);
+    c.push(7);
+    c.push(13);
+    c.push(7);
+    c.push(15);
+    c.push(13);
+    c.push(10);
+    c.push(2);
+    c.push(7);
+    c.push(1);
+    c.push(7);
+    c.push(9);
+    c.push(7);
+    c.push(4);
+    c.push(6);
+    c.push(15);
+    c.push(1);
+    c.push(1);
+    c.push(1);
+    c.push(9);
+    c.push(14);
+    c.push(13);
+    c.push(1);
+    c.push(9);
+    c.push(9);
+    c.push(13);
+    c.push(1);
+    c.push(7);
+    c.push(9);
+    c.push(1);
+    c.push(12);
+    c.push(6);
+    c.push(15);
+    c.push(12);
+    c.push(6);
+    c.push(7);
+    c.push(13);
+    c.push(2);
+    c.push(4);
+    c.push(11);
+    c.push(9);
+    c.push(15);
+    c.push(10);
+    c.push(13);
+    c.push(7);
+    c.push(8);
+    c.push(9);
+    c.push(10);
+    j.push("arthur");
+    j.push("josé");
+    j.push("bernardo");
+    j.push("henry");
+    j.push("erick");
+    j.push("sr.");
+    j.push("eloá");
+    j.push("anthony");
+    j.push("lucas");
+    j.push("mateus");
+    j.push("yan");
+    j.push("cecilia");
+    j.push("beatriz");
+    j.push("maitê");
+    j.push("vinicius");
+    j.push("isabel");
+    j.push("dr.");
+    j.push("luiz");
+    std::cout << jogo(c, j) << std::endl;
+    return 0;
+}
+
+deveria ser
+isabel
+mas deu
+eloá
+
+Teste 5 deu errado!
+O resultado para
+#include<stdio.h>
+int main() {
+    std::stack<int> c;
+    std::queue<std::string> j;
+    c.push(5);
+    c.push(2);
+    c.push(13);
+    c.push(4);
+    c.push(1);
+    c.push(11);
+    c.push(13);
+    c.push(7);
+    c.push(7);
+    c.push(11);
+    c.push(3);
+    c.push(7);
+    c.push(15);
+    c.push(3);
+    c.push(9);
+    c.push(12);
+    c.push(13);
+    c.push(12);
+    c.push(13);
+    c.push(15);
+    c.push(2);
+    c.push(13);
+    c.push(1);
+    c.push(11);
+    c.push(3);
+    c.push(5);
+    c.push(12);
+    c.push(9);
+    c.push(7);
+    c.push(7);
+    c.push(12);
+    c.push(5);
+    c.push(2);
+    c.push(2);
+    c.push(4);
+    c.push(10);
+    c.push(6);
+    c.push(12);
+    c.push(4);
+    c.push(2);
+    c.push(11);
+    c.push(12);
+    c.push(4);
+    c.push(13);
+    c.push(4);
+    c.push(2);
+    c.push(11);
+    c.push(15);
+    c.push(10);
+    c.push(2);
+    c.push(6);
+    c.push(9);
+    c.push(6);
+    c.push(4);
+    c.push(10);
+    c.push(8);
+    c.push(6);
+    c.push(13);
+    c.push(7);
+    c.push(1);
+    c.push(1);
+    c.push(2);
+    c.push(8);
+    c.push(7);
+    c.push(11);
+    c.push(13);
+    c.push(6);
+    c.push(7);
+    c.push(14);
+    c.push(7);
+    j.push("sra.");
+    j.push("cauã");
+    j.push("sara");
+    j.push("fernanda");
+    j.push("luiz");
+    j.push("lucca");
+    j.push("lucas");
+    j.push("josé");
+    j.push("pedro");
+    j.push("dr.");
+    j.push("dra.");
+    std::cout << jogo(c, j) << std::endl;
+    return 0;
+}
+
+deveria ser
+fernanda
+mas deu
+cauã
+
+Teste 6: correto! +0.050
+Teste 7 deu errado!
+O resultado para
+#include<stdio.h>
+int main() {
+    std::stack<int> c;
+    std::queue<std::string> j;
+    c.push(15);
+    c.push(5);
+    c.push(6);
+    c.push(4);
+    c.push(10);
+    c.push(5);
+    c.push(2);
+    c.push(12);
+    c.push(12);
+    c.push(2);
+    c.push(12);
+    c.push(10);
+    c.push(2);
+    c.push(2);
+    c.push(11);
+    c.push(8);
+    c.push(1);
+    c.push(10);
+    c.push(15);
+    c.push(15);
+    c.push(12);
+    c.push(1);
+    c.push(8);
+    c.push(10);
+    c.push(7);
+    c.push(14);
+    c.push(4);
+    c.push(13);
+    c.push(1);
+    c.push(11);
+    c.push(6);
+    c.push(11);
+    c.push(3);
+    c.push(7);
+    c.push(11);
+    c.push(11);
+    c.push(6);
+    c.push(6);
+    c.push(12);
+    c.push(10);
+    c.push(3);
+    c.push(6);
+    c.push(1);
+    c.push(7);
+    c.push(3);
+    c.push(7);
+    c.push(10);
+    c.push(1);
+    c.push(8);
+    c.push(5);
+    c.push(7);
+    c.push(10);
+    c.push(2);
+    c.push(10);
+    c.push(6);
+    c.push(5);
+    c.push(6);
+    c.push(5);
+    c.push(6);
+    c.push(10);
+    c.push(11);
+    c.push(13);
+    c.push(4);
+    c.push(6);
+    c.push(7);
+    c.push(1);
+    c.push(1);
+    c.push(3);
+    c.push(1);
+    c.push(13);
+    c.push(6);
+    c.push(1);
+    c.push(6);
+    c.push(4);
+    c.push(11);
+    c.push(14);
+    c.push(9);
+    c.push(6);
+    c.push(5);
+    c.push(12);
+    c.push(9);
+    j.push("lorenzo");
+    j.push("sr.");
+    j.push("bruna");
+    j.push("larissa");
+    j.push("luiz");
+    j.push("davi");
+    j.push("ester");
+    j.push("sra.");
+    j.push("srta.");
+    j.push("pedro");
+    j.push("laís");
+    std::cout << jogo(c, j) << std::endl;
+    return 0;
+}
+
+deveria ser
+luiz
+mas deu
+laís
+
+Teste 8 deu errado!
+O resultado para
+#include<stdio.h>
+int main() {
+    std::stack<int> c;
+    std::queue<std::string> j;
+    c.push(3);
+    c.push(10);
+    c.push(1);
+    c.push(15);
+    c.push(5);
+    c.push(4);
+    c.push(10);
+    c.push(14);
+    c.push(9);
+    c.push(6);
+    c.push(5);
+    c.push(10);
+    c.push(4);
+    c.push(1);
+    c.push(3);
+    c.push(11);
+    c.push(6);
+    c.push(15);
+    c.push(1);
+    c.push(15);
+    c.push(4);
+    c.push(1);
+    c.push(13);
+    c.push(8);
+    c.push(4);
+    c.push(7);
+    c.push(14);
+    c.push(3);
+    c.push(10);
+    c.push(13);
+    c.push(13);
+    c.push(11);
+    c.push(6);
+    c.push(1);
+    c.push(3);
+    c.push(14);
+    c.push(15);
+    c.push(1);
+    c.push(7);
+    c.push(2);
+    c.push(9);
+    c.push(4);
+    c.push(10);
+    c.push(11);
+    c.push(10);
+    c.push(11);
+    c.push(4);
+    c.push(7);
+    c.push(11);
+    c.push(7);
+    c.push(2);
+    c.push(11);
+    c.push(8);
+    c.push(2);
+    c.push(9);
+    c.push(15);
+    c.push(14);
+    c.push(6);
+    c.push(1);
+    c.push(14);
+    c.push(5);
+    c.push(9);
+    c.push(8);
+    c.push(15);
+    c.push(7);
+    c.push(10);
+    c.push(15);
+    c.push(7);
+    c.push(2);
+    c.push(8);
+    c.push(9);
+    c.push(8);
+    c.push(11);
+    c.push(2);
+    c.push(5);
+    c.push(7);
+    c.push(14);
+    c.push(11);
+    c.push(1);
+    j.push("maria");
+    j.push("raquel");
+    j.push("vinícius");
+    j.push("sr.");
+    j.push("fernando");
+    j.push("hellena");
+    j.push("fernanda");
+    j.push("joão");
+    j.push("nina");
+    std::cout << jogo(c, j) << std::endl;
+    return 0;
+}
+
+deveria ser
+raquel
+mas deu
+fernanda
+
+Teste 9: correto! +0.050
+Teste 10 deu errado!
+O resultado para
+#include<stdio.h>
+int main() {
+    std::stack<int> c;
+    std::queue<std::string> j;
+    c.push(5);
+    c.push(13);
+    c.push(12);
+    c.push(1);
+    c.push(1);
+    c.push(12);
+    c.push(8);
+    c.push(5);
+    c.push(2);
+    c.push(12);
+    c.push(9);
+    c.push(5);
+    c.push(8);
+    c.push(7);
+    c.push(9);
+    c.push(3);
+    c.push(7);
+    c.push(1);
+    c.push(7);
+    c.push(10);
+    c.push(4);
+    c.push(5);
+    c.push(7);
+    c.push(12);
+    c.push(15);
+    c.push(8);
+    c.push(2);
+    c.push(9);
+    c.push(12);
+    c.push(2);
+    c.push(5);
+    c.push(14);
+    c.push(9);
+    c.push(4);
+    c.push(10);
+    c.push(3);
+    c.push(15);
+    c.push(13);
+    c.push(2);
+    c.push(11);
+    c.push(14);
+    c.push(8);
+    c.push(15);
+    c.push(10);
+    c.push(9);
+    c.push(15);
+    c.push(10);
+    c.push(5);
+    c.push(15);
+    c.push(12);
+    c.push(12);
+    c.push(1);
+    c.push(10);
+    c.push(12);
+    c.push(9);
+    c.push(6);
+    c.push(13);
+    c.push(13);
+    c.push(9);
+    c.push(13);
+    c.push(9);
+    c.push(11);
+    c.push(12);
+    c.push(4);
+    c.push(11);
+    c.push(15);
+    c.push(14);
+    c.push(9);
+    c.push(12);
+    c.push(7);
+    c.push(12);
+    c.push(9);
+    c.push(11);
+    c.push(4);
+    c.push(8);
+    c.push(15);
+    c.push(1);
+    c.push(13);
+    c.push(11);
+    c.push(9);
+    c.push(9);
+    c.push(11);
+    c.push(5);
+    c.push(9);
+    c.push(12);
+    c.push(13);
+    c.push(13);
+    c.push(7);
+    c.push(10);
+    c.push(12);
+    c.push(10);
+    c.push(4);
+    c.push(4);
+    c.push(15);
+    c.push(2);
+    c.push(10);
+    c.push(12);
+    c.push(8);
+    c.push(11);
+    j.push("juliana");
+    j.push("vitor");
+    j.push("henry");
+    j.push("marcela");
+    j.push("alícia");
+    j.push("nicolas");
+    j.push("joão");
+    j.push("francisco");
+    j.push("brenda");
+    j.push("ísis");
+    j.push("sr.");
+    j.push("arthur");
+    j.push("luísa");
+    j.push("asafe");
+    j.push("antônio");
+    j.push("rodrigo");
+    std::cout << jogo(c, j) << std::endl;
+    return 0;
+}
+
+deveria ser
+rodrigo
+mas deu
+luísa
+
+Teste 11 deu errado!
+O resultado para
+#include<stdio.h>
+int main() {
+    std::stack<int> c;
+    std::queue<std::string> j;
+    c.push(12);
+    c.push(12);
+    c.push(5);
+    c.push(10);
+    c.push(9);
+    c.push(2);
+    c.push(15);
+    c.push(4);
+    c.push(15);
+    c.push(6);
+    c.push(6);
+    c.push(14);
+    c.push(1);
+    c.push(9);
+    c.push(14);
+    c.push(14);
+    c.push(15);
+    c.push(4);
+    c.push(9);
+    c.push(4);
+    c.push(5);
+    c.push(15);
+    c.push(7);
+    c.push(11);
+    c.push(8);
+    c.push(8);
+    c.push(13);
+    c.push(8);
+    c.push(5);
+    c.push(11);
+    c.push(4);
+    c.push(14);
+    c.push(15);
+    c.push(13);
+    c.push(12);
+    c.push(10);
+    c.push(9);
+    c.push(1);
+    c.push(14);
+    c.push(13);
+    c.push(11);
+    c.push(4);
+    c.push(9);
+    c.push(12);
+    c.push(11);
+    c.push(9);
+    c.push(5);
+    c.push(3);
+    c.push(3);
+    c.push(8);
+    c.push(7);
+    c.push(14);
+    c.push(3);
+    c.push(10);
+    c.push(10);
+    c.push(15);
+    c.push(8);
+    c.push(10);
+    c.push(15);
+    c.push(11);
+    c.push(14);
+    c.push(9);
+    c.push(4);
+    c.push(4);
+    c.push(5);
+    j.push("luiza");
+    j.push("alícia");
+    j.push("benjamim");
+    j.push("isaque");
+    j.push("maria");
+    j.push("dr.");
+    j.push("thomas");
+    j.push("agatha");
+    j.push("hadassa");
+    j.push("sr.");
+    j.push("clara");
+    j.push("sra.");
+    j.push("rael");
+    j.push("mariane");
+    j.push("igor");
+    j.push("theodoro");
+    j.push("joão");
+    std::cout << jogo(c, j) << std::endl;
+    return 0;
+}
+
+deveria ser
+alícia
+mas deu
+rael
+
+Teste 12 deu errado!
+O resultado para
+#include<stdio.h>
+int main() {
+    std::stack<int> c;
+    std::queue<std::string> j;
+    c.push(12);
+    c.push(4);
+    c.push(2);
+    c.push(12);
+    c.push(14);
+    c.push(14);
+    c.push(11);
+    c.push(12);
+    c.push(5);
+    c.push(9);
+    c.push(7);
+    c.push(11);
+    c.push(2);
+    c.push(3);
+    c.push(13);
+    c.push(7);
+    c.push(9);
+    c.push(5);
+    c.push(8);
+    c.push(11);
+    c.push(13);
+    c.push(3);
+    c.push(4);
+    c.push(10);
+    c.push(7);
+    c.push(11);
+    c.push(13);
+    c.push(1);
+    c.push(14);
+    c.push(11);
+    c.push(2);
+    c.push(1);
+    c.push(14);
+    c.push(10);
+    c.push(14);
+    c.push(5);
+    c.push(15);
+    c.push(13);
+    c.push(15);
+    c.push(6);
+    c.push(10);
+    c.push(6);
+    c.push(6);
+    c.push(10);
+    c.push(8);
+    c.push(7);
+    c.push(12);
+    c.push(2);
+    c.push(1);
+    c.push(13);
+    c.push(2);
+    c.push(5);
+    c.push(9);
+    c.push(4);
+    c.push(6);
+    c.push(8);
+    c.push(11);
+    c.push(14);
+    c.push(2);
+    c.push(2);
+    c.push(9);
+    c.push(15);
+    c.push(3);
+    c.push(4);
+    c.push(15);
+    c.push(9);
+    c.push(5);
+    c.push(6);
+    c.push(8);
+    c.push(14);
+    c.push(6);
+    c.push(10);
+    c.push(13);
+    c.push(7);
+    c.push(11);
+    c.push(8);
+    c.push(15);
+    c.push(11);
+    c.push(1);
+    c.push(9);
+    c.push(6);
+    c.push(14);
+    c.push(2);
+    c.push(15);
+    c.push(3);
+    c.push(8);
+    c.push(8);
+    c.push(13);
+    c.push(10);
+    c.push(6);
+    c.push(7);
+    c.push(15);
+    c.push(14);
+    c.push(3);
+    c.push(11);
+    c.push(6);
+    c.push(15);
+    c.push(12);
+    c.push(11);
+    j.push("yago");
+    j.push("clarice");
+    j.push("alícia");
+    j.push("ana");
+    j.push("asafe");
+    j.push("bernardo");
+    j.push("bruna");
+    j.push("valentina");
+    j.push("theo");
+    j.push("maria");
+    j.push("josé");
+    j.push("vicente");
+    j.push("yan");
+    j.push("lunna");
+    j.push("bella");
+    j.push("sr.");
+    j.push("yuri");
+    std::cout << jogo(c, j) << std::endl;
+    return 0;
+}
+
+deveria ser
+yuri
+mas deu
+bruna
+
+Teste 13 deu errado!
+O resultado para
+#include<stdio.h>
+int main() {
+    std::stack<int> c;
+    std::queue<std::string> j;
+    c.push(5);
+    c.push(1);
+    c.push(8);
+    c.push(3);
+    c.push(6);
+    c.push(4);
+    c.push(3);
+    c.push(4);
+    c.push(6);
+    c.push(6);
+    c.push(1);
+    c.push(8);
+    c.push(14);
+    c.push(12);
+    c.push(14);
+    c.push(12);
+    c.push(6);
+    c.push(15);
+    c.push(13);
+    c.push(3);
+    c.push(3);
+    c.push(14);
+    c.push(5);
+    c.push(12);
+    c.push(10);
+    c.push(7);
+    c.push(6);
+    c.push(5);
+    c.push(6);
+    c.push(2);
+    c.push(5);
+    c.push(12);
+    c.push(5);
+    c.push(2);
+    c.push(13);
+    c.push(6);
+    c.push(15);
+    c.push(4);
+    c.push(11);
+    c.push(11);
+    c.push(6);
+    c.push(10);
+    c.push(14);
+    c.push(2);
+    c.push(7);
+    c.push(12);
+    c.push(14);
+    c.push(2);
+    c.push(13);
+    c.push(6);
+    c.push(14);
+    c.push(3);
+    c.push(15);
+    c.push(8);
+    c.push(9);
+    c.push(2);
+    c.push(6);
+    c.push(15);
+    c.push(4);
+    c.push(10);
+    c.push(1);
+    c.push(6);
+    c.push(10);
+    c.push(10);
+    c.push(5);
+    c.push(3);
+    c.push(14);
+    c.push(5);
+    c.push(9);
+    c.push(1);
+    c.push(3);
+    c.push(8);
+    c.push(10);
+    c.push(11);
+    c.push(3);
+    c.push(12);
+    c.push(12);
+    c.push(7);
+    c.push(7);
+    c.push(2);
+    c.push(3);
+    c.push(13);
+    c.push(10);
+    c.push(1);
+    c.push(5);
+    c.push(4);
+    c.push(12);
+    c.push(7);
+    c.push(15);
+    j.push("leandro");
+    j.push("caio");
+    j.push("davi");
+    j.push("igor");
+    j.push("dra.");
+    j.push("ana");
+    j.push("beatriz");
+    j.push("vitória");
+    j.push("emanuella");
+    j.push("enzo");
+    j.push("luiz");
+    j.push("caroline");
+    j.push("josué");
+    j.push("marina");
+    j.push("giovanna");
+    std::cout << jogo(c, j) << std::endl;
+    return 0;
+}
+
+deveria ser
+igor
+mas deu
+enzo
+
+Teste 14 deu errado!
+O resultado para
+#include<stdio.h>
+int main() {
+    std::stack<int> c;
+    std::queue<std::string> j;
+    c.push(6);
+    c.push(5);
+    c.push(15);
+    c.push(13);
+    c.push(8);
+    c.push(4);
+    c.push(6);
+    c.push(12);
+    c.push(15);
+    c.push(14);
+    c.push(3);
+    c.push(2);
+    c.push(2);
+    c.push(12);
+    c.push(14);
+    c.push(8);
+    c.push(10);
+    c.push(12);
+    c.push(13);
+    c.push(7);
+    c.push(12);
+    c.push(9);
+    c.push(7);
+    c.push(7);
+    c.push(2);
+    c.push(8);
+    c.push(7);
+    c.push(13);
+    c.push(5);
+    c.push(6);
+    c.push(7);
+    c.push(15);
+    c.push(4);
+    c.push(2);
+    c.push(9);
+    c.push(3);
+    c.push(6);
+    c.push(12);
+    c.push(3);
+    c.push(7);
+    c.push(7);
+    c.push(15);
+    c.push(15);
+    c.push(10);
+    c.push(1);
+    c.push(11);
+    c.push(9);
+    c.push(8);
+    c.push(5);
+    c.push(12);
+    c.push(11);
+    c.push(12);
+    c.push(13);
+    c.push(3);
+    c.push(12);
+    c.push(15);
+    c.push(5);
+    c.push(4);
+    c.push(3);
+    c.push(1);
+    c.push(7);
+    c.push(13);
+    c.push(4);
+    c.push(13);
+    c.push(9);
+    c.push(1);
+    c.push(12);
+    c.push(10);
+    c.push(14);
+    c.push(14);
+    c.push(10);
+    c.push(6);
+    c.push(15);
+    c.push(3);
+    c.push(4);
+    c.push(14);
+    c.push(2);
+    c.push(1);
+    j.push("bento");
+    j.push("natália");
+    j.push("rafael");
+    j.push("mateus");
+    j.push("emanuel");
+    j.push("ana");
+    j.push("carolina");
+    j.push("sra.");
+    j.push("daniel");
+    j.push("isaac");
+    j.push("isabela");
+    j.push("augusto");
+    j.push("ísis");
+    j.push("sr.");
+    j.push("camila");
+    std::cout << jogo(c, j) << std::endl;
+    return 0;
+}
+
+deveria ser
+mateus
+mas deu
+carolina
+
+Teste 15 deu errado!
+O resultado para
+#include<stdio.h>
+int main() {
+    std::stack<int> c;
+    std::queue<std::string> j;
+    c.push(2);
+    c.push(11);
+    c.push(8);
+    c.push(14);
+    c.push(5);
+    c.push(8);
+    c.push(9);
+    c.push(8);
+    c.push(2);
+    c.push(1);
+    c.push(5);
+    c.push(7);
+    c.push(5);
+    c.push(3);
+    c.push(7);
+    c.push(11);
+    c.push(12);
+    c.push(12);
+    c.push(6);
+    c.push(14);
+    c.push(9);
+    c.push(13);
+    c.push(4);
+    c.push(2);
+    c.push(12);
+    c.push(5);
+    c.push(15);
+    c.push(3);
+    j.push("aurora");
+    j.push("léo");
+    j.push("andré");
+    j.push("bryan");
+    j.push("aylla");
+    j.push("olívia");
+    j.push("luiz");
+    j.push("carolina");
+    j.push("calebe");
+    j.push("sr.");
+    j.push("dr.");
+    j.push("maria");
+    j.push("maya");
+    j.push("stella");
+    j.push("fernando");
+    j.push("yago");
+    j.push("murilo");
+    std::cout << jogo(c, j) << std::endl;
+    return 0;
+}
+
+deveria ser
+fernando
+mas deu
+luiz
+
+Teste 16 deu errado!
+O resultado para
+#include<stdio.h>
+int main() {
+    std::stack<int> c;
+    std::queue<std::string> j;
+    c.push(6);
+    c.push(11);
+    c.push(5);
+    c.push(3);
+    c.push(9);
+    c.push(10);
+    c.push(12);
+    c.push(13);
+    c.push(2);
+    c.push(8);
+    c.push(14);
+    c.push(8);
+    c.push(2);
+    c.push(6);
+    c.push(11);
+    c.push(8);
+    c.push(7);
+    c.push(9);
+    c.push(10);
+    c.push(6);
+    c.push(11);
+    j.push("yasmin");
+    j.push("maysa");
+    j.push("srta.");
+    j.push("ana");
+    j.push("maria");
+    j.push("sr.");
+    j.push("raul");
+    j.push("enzo");
+    j.push("ravi");
+    j.push("joão");
+    j.push("liz");
+    j.push("dra.");
+    j.push("gustavo");
+    std::cout << jogo(c, j) << std::endl;
+    return 0;
+}
+
+deveria ser
+gustavo
+mas deu
+raul
+
+Teste 17 deu errado!
+O resultado para
+#include<stdio.h>
+int main() {
+    std::stack<int> c;
+    std::queue<std::string> j;
+    c.push(2);
+    c.push(14);
+    c.push(4);
+    c.push(9);
+    c.push(8);
+    c.push(8);
+    c.push(13);
+    c.push(15);
+    c.push(2);
+    c.push(13);
+    c.push(7);
+    c.push(8);
+    c.push(10);
+    c.push(7);
+    c.push(9);
+    c.push(6);
+    c.push(3);
+    c.push(7);
+    c.push(13);
+    c.push(11);
+    c.push(12);
+    c.push(4);
+    c.push(7);
+    c.push(11);
+    c.push(9);
+    c.push(14);
+    c.push(9);
+    c.push(7);
+    c.push(5);
+    c.push(6);
+    c.push(10);
+    c.push(3);
+    c.push(13);
+    c.push(6);
+    c.push(2);
+    c.push(4);
+    c.push(9);
+    c.push(2);
+    c.push(11);
+    c.push(9);
+    c.push(2);
+    c.push(5);
+    c.push(15);
+    c.push(15);
+    c.push(8);
+    c.push(14);
+    c.push(4);
+    c.push(13);
+    c.push(15);
+    c.push(2);
+    c.push(12);
+    c.push(6);
+    c.push(8);
+    c.push(14);
+    c.push(4);
+    c.push(9);
+    c.push(13);
+    c.push(15);
+    c.push(9);
+    c.push(6);
+    j.push("nicolas");
+    j.push("clara");
+    j.push("joão");
+    j.push("pedro");
+    j.push("emanuella");
+    j.push("breno");
+    j.push("maria");
+    j.push("beatriz");
+    j.push("esther");
+    j.push("maya");
+    j.push("dr.");
+    j.push("agatha");
+    j.push("matteo");
+    j.push("pietra");
+    std::cout << jogo(c, j) << std::endl;
+    return 0;
+}
+
+deveria ser
+breno
+mas deu
+maya
+
+Teste 18 deu errado!
+O resultado para
+#include<stdio.h>
+int main() {
+    std::stack<int> c;
+    std::queue<std::string> j;
+    c.push(3);
+    c.push(13);
+    c.push(8);
+    c.push(8);
+    c.push(7);
+    c.push(13);
+    c.push(12);
+    c.push(7);
+    c.push(3);
+    c.push(2);
+    c.push(9);
+    c.push(6);
+    c.push(3);
+    c.push(13);
+    c.push(2);
+    c.push(15);
+    c.push(8);
+    c.push(11);
+    c.push(15);
+    c.push(2);
+    c.push(1);
+    c.push(6);
+    c.push(8);
+    c.push(4);
+    c.push(4);
+    c.push(4);
+    c.push(12);
+    c.push(11);
+    c.push(12);
+    c.push(11);
+    c.push(12);
+    c.push(8);
+    c.push(3);
+    c.push(3);
+    c.push(15);
+    c.push(15);
+    c.push(11);
+    c.push(2);
+    c.push(7);
+    c.push(3);
+    c.push(12);
+    c.push(5);
+    c.push(14);
+    c.push(14);
+    c.push(12);
+    c.push(14);
+    c.push(9);
+    c.push(6);
+    c.push(10);
+    c.push(7);
+    c.push(8);
+    c.push(15);
+    c.push(4);
+    c.push(6);
+    c.push(7);
+    c.push(2);
+    c.push(7);
+    c.push(3);
+    c.push(1);
+    c.push(10);
+    c.push(2);
+    c.push(1);
+    c.push(6);
+    c.push(15);
+    c.push(3);
+    c.push(5);
+    c.push(9);
+    c.push(7);
+    c.push(3);
+    c.push(6);
+    c.push(14);
+    c.push(4);
+    c.push(14);
+    c.push(6);
+    c.push(15);
+    c.push(3);
+    c.push(10);
+    j.push("vinicius");
+    j.push("emanuella");
+    j.push("dra.");
+    j.push("andré");
+    j.push("alexia");
+    j.push("elisa");
+    j.push("théo");
+    j.push("ana");
+    j.push("rebeca");
+    j.push("enzo");
+    j.push("carlos");
+    j.push("dante");
+    std::cout << jogo(c, j) << std::endl;
+    return 0;
+}
+
+deveria ser
+rebeca
+mas deu
+théo
+
+Teste 19 deu errado!
+O resultado para
+#include<stdio.h>
+int main() {
+    std::stack<int> c;
+    std::queue<std::string> j;
+    c.push(15);
+    c.push(13);
+    c.push(7);
+    c.push(8);
+    c.push(2);
+    c.push(10);
+    c.push(1);
+    c.push(13);
+    c.push(5);
+    c.push(12);
+    c.push(5);
+    c.push(4);
+    c.push(7);
+    c.push(15);
+    c.push(14);
+    c.push(2);
+    c.push(8);
+    c.push(8);
+    c.push(1);
+    c.push(5);
+    c.push(1);
+    c.push(3);
+    c.push(6);
+    c.push(15);
+    c.push(13);
+    c.push(15);
+    c.push(12);
+    c.push(4);
+    c.push(7);
+    c.push(4);
+    c.push(8);
+    c.push(14);
+    c.push(13);
+    c.push(4);
+    c.push(14);
+    c.push(9);
+    c.push(5);
+    c.push(3);
+    c.push(5);
+    c.push(4);
+    c.push(10);
+    c.push(9);
+    c.push(12);
+    c.push(6);
+    c.push(12);
+    c.push(15);
+    c.push(5);
+    c.push(12);
+    c.push(3);
+    c.push(1);
+    c.push(7);
+    c.push(9);
+    c.push(5);
+    c.push(12);
+    c.push(4);
+    c.push(12);
+    c.push(15);
+    c.push(3);
+    c.push(15);
+    c.push(3);
+    c.push(5);
+    c.push(3);
+    c.push(8);
+    c.push(10);
+    c.push(12);
+    c.push(11);
+    c.push(14);
+    c.push(9);
+    c.push(13);
+    c.push(4);
+    c.push(1);
+    c.push(5);
+    c.push(2);
+    c.push(4);
+    c.push(7);
+    c.push(9);
+    c.push(10);
+    c.push(11);
+    c.push(11);
+    c.push(10);
+    c.push(5);
+    c.push(3);
+    c.push(8);
+    c.push(6);
+    c.push(8);
+    c.push(4);
+    c.push(14);
+    c.push(15);
+    c.push(5);
+    c.push(11);
+    c.push(12);
+    c.push(5);
+    c.push(3);
+    c.push(14);
+    c.push(15);
+    c.push(5);
+    c.push(7);
+    c.push(14);
+    c.push(2);
+    j.push("samuel");
+    j.push("maria");
+    j.push("apollo");
+    j.push("pietro");
+    j.push("caleb");
+    j.push("noah");
+    j.push("léo");
+    j.push("arthur");
+    j.push("camila");
+    j.push("melissa");
+    j.push("otávio");
+    j.push("maysa");
+    j.push("sabrina");
+    j.push("valentim");
+    j.push("luiz");
+    std::cout << jogo(c, j) << std::endl;
+    return 0;
+}
+
+deveria ser
+apollo
+mas deu
+otávio
+
+Teste 20 deu errado!
+O resultado para
+#include<stdio.h>
+int main() {
+    std::stack<int> c;
+    std::queue<std::string> j;
+    c.push(8);
+    c.push(5);
+    c.push(14);
+    c.push(10);
+    c.push(10);
+    c.push(1);
+    c.push(13);
+    c.push(1);
+    c.push(8);
+    c.push(10);
+    c.push(14);
+    c.push(7);
+    c.push(10);
+    c.push(2);
+    c.push(6);
+    c.push(11);
+    c.push(1);
+    c.push(15);
+    c.push(11);
+    c.push(11);
+    c.push(14);
+    c.push(12);
+    c.push(6);
+    c.push(1);
+    c.push(2);
+    c.push(4);
+    c.push(2);
+    c.push(8);
+    c.push(3);
+    c.push(1);
+    c.push(4);
+    c.push(2);
+    c.push(4);
+    c.push(3);
+    c.push(13);
+    c.push(11);
+    c.push(2);
+    c.push(2);
+    c.push(1);
+    c.push(2);
+    c.push(5);
+    c.push(15);
+    c.push(11);
+    c.push(2);
+    c.push(10);
+    c.push(5);
+    c.push(3);
+    c.push(9);
+    c.push(4);
+    c.push(5);
+    c.push(9);
+    c.push(4);
+    c.push(14);
+    c.push(10);
+    c.push(12);
+    c.push(14);
+    c.push(8);
+    c.push(14);
+    c.push(15);
+    c.push(2);
+    c.push(13);
+    c.push(14);
+    c.push(15);
+    c.push(8);
+    c.push(12);
+    c.push(8);
+    c.push(3);
+    c.push(3);
+    c.push(3);
+    c.push(4);
+    c.push(7);
+    c.push(4);
+    c.push(9);
+    c.push(1);
+    c.push(12);
+    c.push(5);
+    c.push(13);
+    c.push(4);
+    c.push(4);
+    c.push(1);
+    c.push(7);
+    c.push(14);
+    c.push(3);
+    c.push(12);
+    c.push(4);
+    c.push(5);
+    c.push(5);
+    c.push(12);
+    c.push(12);
+    c.push(6);
+    c.push(4);
+    c.push(6);
+    c.push(8);
+    c.push(5);
+    c.push(5);
+    j.push("sabrina");
+    j.push("augusto");
+    j.push("brayan");
+    j.push("ana");
+    j.push("thales");
+    j.push("lívia");
+    j.push("bianca");
+    j.push("enzo");
+    j.push("kevin");
+    j.push("valentina");
+    j.push("sr.");
+    j.push("josé");
+    j.push("isabela");
+    j.push("dr.");
+    j.push("dra.");
+    j.push("isabella");
+    std::cout << jogo(c, j) << std::endl;
+    return 0;
+}
+
+deveria ser
+ana
+mas deu
+valentina
+
+Nota exercicio 2: 0.2
+Procurando exercício 3...
+Procurando exercício 4...
+Exercício 4...
+Criando testes aleatórios...
+Testes Criados!
+Compilando...
+g++ -O2 -Wno-unused-result  "ex4.cpp" 
+Teste 1 deu errado!
+#include<iostream>
+int main() {
+    std::vector<std::string> v;
+    int n;
+    std::string aux;
+    while(std::cin >> aux)
+        v.push_back(aux);
+    ordena_strings(v);
+    for(auto s : v)
+        std::cout << s << " ";
+    std::cout << std::endl;
+    return 0;
+}
+
+O resultado para
+zzzzzzzzzzzzzzzz test testando testados teste
+deveria ser
+test teste testando testados zzzzzzzzzzzzzzzz
+mas deu
+test testando testados teste zzzzzzzzzzzzzzzz 
+
+Teste 2: correto! +0.050
+Teste 3 deu errado!
+#include<iostream>
+int main() {
+    std::vector<std::string> v;
+    int n;
+    std::string aux;
+    while(std::cin >> aux)
+        v.push_back(aux);
+    ordena_strings(v);
+    for(auto s : v)
+        std::cout << s << " ";
+    std::cout << std::endl;
+    return 0;
+}
+
+O resultado para
+aa b
+deveria ser
+b aa
+mas deu
+aa b 
+
+Teste 4: correto! +0.050
+Teste 5 deu errado!
+None
+O resultado para
+neque porro maiores culpa ex ex rem quod ex nesciunt non magni quas occaecati voluptate nobis velit quod aliquam tempore perspiciatis quidem at necessitatibus a laborum eveniet totam eum amet deserunt reprehenderit accusamus nam aliquam dolores eum commodi maxime a laudantium illo quo nulla similique eveniet labore inventore magni repudiandae laboriosam corrupti culpa voluptate dicta delectus ullam in fuga accusamus voluptatibus et odit dicta iure aperiam et dolore magni voluptatibus harum quo ullam repellendus commodi occaecati accusantium minus modi nisi sit perspiciatis neque quas aliquam deserunt voluptate provident voluptate vitae quasi officiis aliquid esse earum nemo modi soluta iure in tempore tempore rerum blanditiis eligendi illo illum natus error alias iste illum suscipit excepturi veniam vel et deleniti maxime vero voluptatem dicta quo nesciunt quia dolores iusto repellat quod totam optio incidunt repellendus delectus voluptatum distinctio nihil delectus voluptas odit necessitatibus quidem tempore modi eius qui nostrum nisi rem dolorem blanditiis nemo sequi voluptas deleniti nostrum nemo quod non ut ea optio id sit iure ut incidunt officia atque debitis occaecati quia molestiae pariatur optio beatae inventore fuga natus ad quisquam inventore eligendi vero adipisci alias sit reiciendis eos labore et id eos omnis nulla consectetur maxime minima corrupti doloremque quaerat cupiditate numquam error nesciunt cupiditate magni nulla optio totam quos laborum possimus a temporibus minus doloribus laborum error sunt maxime quo laudantium ea eligendi inventore beatae facere et aperiam eius et corporis modi at eligendi dolorum saepe exercitationem consequuntur sint sed ducimus eius doloribus tempore perspiciatis a temporibus totam ratione harum quis dolores impedit labore magnam eligendi veritatis ipsam facilis sequi omnis quos nam nostrum voluptatem maxime laudantium facere neque inventore commodi ullam assumenda asperiores consequuntur maxime dolorum magni qui accusamus debitis enim ipsa atque unde iste quam doloribus modi libero eius doloremque ullam delectus deleniti deserunt necessitatibus excepturi quibusdam voluptates necessitatibus id et nostrum ipsam distinctio officia ea laboriosam impedit blanditiis maxime ipsum cum ratione esse vero atque mollitia dignissimos similique delectus hic ex ab accusamus nulla sit delectus qui inventore doloremque voluptas aliquam cum blanditiis itaque ad quae iste corporis eius iure excepturi esse vero magni molestias similique dolore natus enim facilis optio vitae ab voluptates incidunt facere odit delectus illum consectetur eum dicta ipsam explicabo officia reprehenderit minus unde asperiores quis vel tenetur harum consequatur alias quo qui non dolorum quasi commodi voluptates et sed dolor rerum ipsa similique voluptas veritatis ad necessitatibus consectetur fugit amet totam explicabo dolorem magni corporis incidunt facilis nemo aut similique cumque inventore voluptate animi
+deveria ser
+a a a a ut ut in in id id id ex ex ex ex et et et et et et et et ea ea ea at at ad ad ad ab ab vel vel sit sit sit sit sed sed rem rem quo quo quo quo quo qui qui qui qui non non non nam nam hic eum eum eum eos eos cum cum aut vero vero vero vero unde unde sunt sint quos quos quod quod quod quod quis quis quia quia quas quas quam quae odit odit odit nisi nisi nemo nemo nemo nemo modi modi modi modi modi iure iure iure iure iste iste iste ipsa ipsa illo illo fuga fuga esse esse esse enim enim eius eius eius eius eius amet amet vitae vitae velit ullam ullam ullam ullam totam totam totam totam totam sequi sequi saepe rerum rerum quasi quasi porro optio optio optio optio optio omnis omnis nulla nulla nulla nulla nobis nihil neque neque neque natus natus natus minus minus minus magni magni magni magni magni magni magni iusto ipsum ipsam ipsam ipsam illum illum illum harum harum harum fugit error error error earum dolor dicta dicta dicta dicta culpa culpa atque atque atque animi alias alias alias veniam soluta quidem quidem minima maxime maxime maxime maxime maxime maxime maxime magnam libero labore labore labore itaque facere facere facere dolore dolore cumque beatae beatae tenetur tempore tempore tempore tempore tempore ratione ratione quaerat officia officia officia numquam nostrum nostrum nostrum nostrum maiores laborum laborum laborum impedit impedit facilis facilis facilis eveniet eveniet ducimus dolorum dolorum dolorum dolores dolores dolores dolorem dolorem debitis debitis commodi commodi commodi commodi aperiam aperiam aliquid aliquam aliquam aliquam aliquam voluptas voluptas voluptas voluptas suscipit repellat quisquam possimus pariatur officiis nesciunt nesciunt nesciunt mollitia incidunt incidunt incidunt incidunt eligendi eligendi eligendi eligendi eligendi deserunt deserunt deserunt deleniti deleniti deleniti delectus delectus delectus delectus delectus delectus delectus corrupti corrupti corporis corporis corporis adipisci voluptate voluptate voluptate voluptate voluptate veritatis veritatis similique similique similique similique similique quibusdam provident occaecati occaecati occaecati molestias molestiae inventore inventore inventore inventore inventore inventore inventore explicabo explicabo excepturi excepturi excepturi doloribus doloribus doloribus assumenda accusamus accusamus accusamus accusamus voluptatum voluptates voluptates voluptates voluptatem voluptatem temporibus temporibus reiciendis laudantium laudantium laudantium laboriosam laboriosam doloremque doloremque doloremque distinctio distinctio cupiditate cupiditate blanditiis blanditiis blanditiis blanditiis asperiores asperiores repudiandae repellendus repellendus dignissimos consequatur consectetur consectetur consectetur accusantium voluptatibus voluptatibus perspiciatis perspiciatis perspiciatis consequuntur consequuntur reprehenderit reprehenderit necessitatibus necessitatibus necessitatibus necessitatibus necessitatibus exercitationem
+mas deu
+a a a a ab ab assumenda accusamus accusamus accusamus accusamus accusantium ad ad ad amet amet at at aut beatae beatae doloremque doloremque doloremque distinctio distinctio cupiditate cupiditate blanditiis blanditiis blanditiis blanditiis asperiores asperiores consequatur consectetur consectetur consequuntur consequuntur dolore dolore cumque dignissimos consectetur doloribus doloribus doloribus ea ea ea enim enim eius eius eius eius eius hic eum eum eum eos eos cum cum esse esse esse id id id ex ex ex ex et et et et et et et et exercitationem explicabo explicabo excepturi excepturi excepturi facere facere facere illo illo fuga fuga maiores laborum laborum laborum impedit impedit facilis facilis facilis eveniet eveniet ducimus dolorum dolorum dolorum dolores dolores dolores dolorem dolorem debitis debitis commodi commodi commodi commodi aperiam aperiam aliquid aliquam aliquam aliquam aliquam in in inventore inventore inventore inventore inventore inventore inventore labore labore labore itaque laudantium laudantium laudantium laboriosam laboriosam minima maxime maxime maxime maxime maxime maxime maxime magnam libero modi modi modi modi modi iure iure iure iure iste iste iste ipsa ipsa molestias molestiae nesciunt nesciunt nesciunt mollitia incidunt incidunt incidunt incidunt eligendi eligendi eligendi eligendi eligendi deserunt deserunt deserunt deleniti deleniti deleniti delectus delectus delectus delectus delectus delectus delectus corrupti corrupti corporis corporis corporis adipisci nam nam necessitatibus necessitatibus necessitatibus necessitatibus necessitatibus nisi nisi nemo nemo nemo nemo non non non nostrum nostrum nostrum nostrum vitae vitae velit ullam ullam ullam ullam totam totam totam totam totam sequi sequi saepe rerum rerum quasi quasi porro optio optio optio optio optio omnis omnis nulla nulla nulla nulla nobis nihil neque neque neque natus natus natus minus minus minus magni magni magni magni magni magni magni iusto ipsum ipsam ipsam ipsam illum illum illum harum harum harum fugit error error error earum dolor dicta dicta dicta dicta culpa culpa atque atque atque animi alias alias alias occaecati occaecati officia officia numquam occaecati officia perspiciatis perspiciatis perspiciatis quibusdam provident quaerat quidem quo quo quo qui qui quidem quo quo qui qui vero vero vero vero unde unde sunt sint quos quos quod quod quod quod quis quis quia quia quas quas quam quae odit odit odit ratione ratione reiciendis repellendus repellendus reprehenderit reprehenderit repudiandae similique similique similique similique similique vel vel sit sit sit sit sed sed rem rem soluta tempore tempore tempore tempore tempore temporibus temporibus tenetur ut ut veniam veritatis veritatis voluptas voluptas voluptas voluptas suscipit repellat quisquam possimus pariatur officiis voluptate voluptate voluptate voluptate voluptate voluptatum voluptates voluptates voluptates voluptatem voluptatem voluptatibus voluptatibus 
+
+Teste 6 deu errado!
+None
+O resultado para
+blanditiis commodi culpa accusantium cum repellendus alias voluptatem hic necessitatibus tenetur ab delectus tempora iure nihil sed ducimus praesentium dolorem consequatur doloremque ex saepe ipsum magni error dolores dolore animi nostrum itaque dolores non rerum quas ad cumque placeat hic dolores quod iste eligendi nam quidem quis rem facere sunt tempore aliquid quas perspiciatis harum illum cum rem nam esse quo earum impedit animi autem quibusdam rerum delectus dolore quaerat earum eum cumque quae dolorum neque fuga fugiat nam voluptates pariatur alias earum iure unde iusto ipsum at odio excepturi accusantium aut optio eos earum eveniet distinctio aliquid eligendi accusantium et magnam maxime debitis perspiciatis odit repellendus doloribus dolore ad sint consectetur aspernatur quod sit perspiciatis consequuntur consequatur eos nisi sed atque placeat soluta nulla similique cumque impedit beatae ea quo modi minus quisquam non nam repellat iusto fugit blanditiis quis similique tempora architecto quasi nisi voluptatem voluptates repudiandae voluptatibus est mollitia ratione occaecati ipsum provident suscipit suscipit repellendus eum tempore ab natus doloribus tempora nihil deleniti repudiandae velit rerum odio quam molestias rem distinctio vero sapiente culpa ex molestiae ipsum molestiae voluptatem iure ipsam beatae ab at facilis ea magni voluptate nesciunt sunt neque doloremque iste voluptates voluptatum rerum cumque rem at harum consequatur nisi magni eos excepturi distinctio fugiat rem reprehenderit pariatur quasi officia sit sint eveniet mollitia quaerat ipsum ea eius veniam maxime qui architecto dolorem laudantium corrupti porro totam neque accusamus ducimus hic natus dolore sapiente eveniet repellendus explicabo dicta eum aliquam ex suscipit libero consequatur occaecati ab voluptates quisquam omnis error rerum placeat totam unde nihil rem non minus et quisquam dolor voluptatibus minus suscipit beatae molestias fuga ut commodi velit eveniet cum sequi repudiandae provident vitae deserunt numquam blanditiis dolor minus non nisi quis voluptas illum magnam nisi architecto minima aliquid tenetur rerum suscipit at atque voluptas consectetur ratione blanditiis perspiciatis veritatis officiis omnis quasi mollitia provident earum necessitatibus ipsa ea rerum nulla accusantium doloribus similique eius voluptas cumque corporis officiis quas ex quaerat fugit repellat quis saepe aspernatur cum sed laboriosam odio esse nihil expedita nisi necessitatibus veritatis dicta
+deveria ser
+ut ex ex ex ex et et ea ea ea ea at at at at ad ad ab ab ab ab sit sit sed sed sed rem rem rem rem rem rem quo quo qui non non non non nam nam nam nam hic hic hic eum eum eum est eos eos eos cum cum cum cum aut vero unde unde sunt sunt sint sint quod quod quis quis quis quis quas quas quas quam quae odit odio odio odio nisi nisi nisi nisi nisi nisi modi iure iure iure iste iste ipsa fuga fuga esse esse eius eius vitae velit velit totam totam sequi saepe saepe rerum rerum rerum rerum rerum rerum rerum quasi quasi quasi porro optio omnis omnis nulla nulla nihil nihil nihil nihil neque neque neque natus natus minus minus minus minus magni magni magni iusto iusto ipsum ipsum ipsum ipsum ipsum ipsam illum illum harum harum fugit fugit error error earum earum earum earum earum dolor dolor dicta dicta culpa culpa autem atque atque animi animi alias alias veniam soluta quidem minima maxime maxime magnam magnam libero itaque fugiat fugiat facere dolore dolore dolore dolore cumque cumque cumque cumque cumque beatae beatae beatae tenetur tenetur tempore tempore tempora tempora tempora ratione ratione quaerat quaerat quaerat placeat placeat placeat officia numquam nostrum impedit impedit facilis eveniet eveniet eveniet eveniet ducimus ducimus dolorum dolores dolores dolores dolorem dolorem debitis commodi commodi aliquid aliquid aliquid aliquam voluptas voluptas voluptas suscipit suscipit suscipit suscipit suscipit sapiente sapiente repellat repellat quisquam quisquam quisquam pariatur pariatur officiis officiis nesciunt mollitia mollitia mollitia expedita eligendi eligendi deserunt deleniti delectus delectus corrupti corporis voluptate veritatis veritatis similique similique similique quibusdam provident provident provident occaecati occaecati molestias molestias molestiae molestiae explicabo excepturi excepturi doloribus doloribus doloribus accusamus voluptatum voluptates voluptates voluptates voluptates voluptatem voluptatem voluptatem laudantium laboriosam doloremque doloremque distinctio distinctio distinctio blanditiis blanditiis blanditiis blanditiis aspernatur aspernatur architecto architecto architecto repudiandae repudiandae repudiandae repellendus repellendus repellendus repellendus praesentium consequatur consequatur consequatur consequatur consectetur consectetur accusantium accusantium accusantium accusantium voluptatibus voluptatibus perspiciatis perspiciatis perspiciatis perspiciatis consequuntur reprehenderit necessitatibus necessitatibus necessitatibus
+mas deu
+accusantium architecto at at at at ad ad ab ab ab ab accusamus accusantium accusantium accusantium aspernatur aspernatur architecto architecto aut beatae beatae beatae blanditiis blanditiis blanditiis blanditiis debitis commodi commodi aliquid aliquid aliquid aliquam consequatur consequatur consequatur consequatur consectetur consectetur consequuntur corrupti corporis cum cum cum cum cumque cumque cumque cumque cumque deserunt deleniti delectus delectus vitae velit velit totam totam sequi saepe saepe rerum rerum rerum rerum rerum rerum rerum quasi quasi quasi porro optio omnis omnis nulla nulla nihil nihil nihil nihil neque neque neque natus natus minus minus minus minus magni magni magni iusto iusto ipsum ipsum ipsum ipsum ipsum ipsam illum illum harum harum fugit fugit error error earum earum earum earum earum dolor dolor dicta dicta culpa culpa autem atque atque animi animi alias alias distinctio distinctio distinctio dolore dolore dolore dolore impedit impedit facilis eveniet eveniet eveniet eveniet ducimus ducimus dolorum dolores dolores dolores dolorem dolorem doloremque doloremque doloribus doloribus doloribus ex ex ex ex et et ea ea ea ea explicabo excepturi excepturi fugiat fugiat facere modi iure iure iure iste iste ipsa fuga fuga esse esse eius eius laudantium laboriosam minima maxime maxime magnam magnam libero itaque molestias molestias molestiae molestiae sapiente sapiente repellat repellat quisquam quisquam quisquam pariatur pariatur officiis officiis nesciunt mollitia mollitia mollitia expedita eligendi eligendi necessitatibus necessitatibus necessitatibus occaecati occaecati perspiciatis perspiciatis perspiciatis perspiciatis quaerat quaerat quaerat placeat placeat placeat officia numquam nostrum praesentium quibusdam provident provident provident quidem quod quod quis quis quis quis quas quas quas quam quae odit odio odio odio nisi nisi nisi nisi nisi nisi ratione ratione repellendus repellendus repellendus repellendus reprehenderit repudiandae repudiandae repudiandae sit sit sed sed sed rem rem rem rem rem rem quo quo qui non non non non nam nam nam nam hic hic hic eum eum eum est eos eos eos similique similique similique soluta sunt sunt sint sint suscipit suscipit suscipit suscipit suscipit tenetur tenetur tempore tempore tempora tempora tempora unde unde ut veniam vero voluptas voluptate veritatis veritatis voluptas voluptas voluptates voluptates voluptates voluptates voluptatem voluptatem voluptatem voluptatibus voluptatibus voluptatum 
+
+Teste 7 deu errado!
+None
+O resultado para
+dolores provident quibusdam laborum esse ratione magnam dignissimos debitis voluptatum debitis doloremque sapiente quisquam numquam quo necessitatibus provident animi dolor ratione ipsum sed deserunt libero magnam explicabo et dolore voluptates iste sunt reprehenderit reiciendis error quo alias nihil officia ex eos quae voluptate fuga similique nihil sequi id aliquam quia iusto accusantium minima soluta consequatur nostrum odio voluptas labore odit maxime itaque quod nam non ipsam maiores nemo quo veritatis tempora facilis aperiam officia deleniti dignissimos aperiam dolores occaecati iste veritatis cum omnis repellendus suscipit voluptas iste fugiat occaecati nihil assumenda labore sed voluptate rem eos facere fuga provident quibusdam tempore quia quod consequuntur nobis consequatur sunt modi optio ipsa minus dolorum qui fuga quas ad quisquam sed accusamus modi dolorem natus suscipit iure ut exercitationem neque fugiat omnis commodi voluptates ab earum placeat voluptas eligendi iusto illo modi maiores possimus aut veritatis sequi molestias ea possimus explicabo laboriosam consequatur velit placeat minima voluptate officiis odit odit sapiente est voluptatibus dolorum temporibus architecto ut ratione sequi aliquam odio ratione repellendus ipsam dolorem vero expedita quisquam cum pariatur cumque neque dolore minus accusamus nemo consectetur ducimus dolorem ex accusamus quae beatae dolorem esse error eaque modi totam hic dolor sit optio maxime earum ducimus voluptates odit dolore eius velit praesentium deleniti ullam maxime magni ex modi illo velit et quia assumenda quod dolorem perspiciatis eius suscipit illo exercitationem dolorem odio dolor quae odit alias adipisci modi unde cupiditate magni hic ut voluptas fugiat saepe ducimus sint tempore molestiae ipsa rerum sapiente sint illum asperiores laboriosam suscipit occaecati quasi sit amet dolorum quam mollitia ex accusamus nemo aliquid maiores tempore recusandae qui fuga corrupti voluptatem odit libero ducimus possimus nulla nemo laborum fugit in repellat aspernatur laboriosam rerum ipsa beatae autem officiis natus laborum fuga recusandae ad quas ducimus nemo ad veniam assumenda a aspernatur ipsa quia repellendus totam repudiandae minima quibusdam eveniet voluptatibus voluptates delectus veniam architecto voluptates odio sequi minima repudiandae animi aperiam dolor distinctio quibusdam unde fugiat aut suscipit quos ducimus fugit accusamus omnis quo cumque eos aliquid reiciendis voluptates impedit optio qui saepe ex perspiciatis voluptatibus ipsa expedita ab id tempore eos incidunt quo nobis recusandae vero tenetur deleniti ex blanditiis dolorem excepturi nisi nobis voluptates quasi consequuntur quaerat quos aspernatur laudantium quod quam praesentium doloribus esse vero repellat et corrupti delectus ad dolor cumque at adipisci animi voluptatibus doloremque accusantium provident harum officia at suscipit nostrum consectetur inventore suscipit dolor delectus facere inventore ex odit dolorum doloremque maiores aliquam soluta cumque ipsa provident officiis atque id iure perferendis magnam nulla neque earum assumenda cum officiis sed enim ea omnis dignissimos in et atque consectetur neque ea magnam nulla optio ea pariatur eos iste voluptatum sapiente ab iste distinctio similique modi totam fuga eaque ratione voluptatem nostrum excepturi blanditiis nesciunt qui nulla reiciendis pariatur vel architecto perferendis placeat vitae perspiciatis vel aliquam quidem error recusandae ea recusandae vitae dolore similique dolore quod vitae autem ex doloribus iste necessitatibus vero assumenda atque cupiditate placeat explicabo nisi vel sint praesentium voluptatum nihil dolor dolore maxime dicta dolor architecto rem ex soluta animi itaque quaerat vitae facilis optio possimus ducimus quo illo impedit sit maxime quod est at vitae tenetur delectus mollitia corrupti magni libero odio aut molestiae veniam ex perferendis repudiandae veniam quos consequuntur ratione dolores rerum in minus perferendis blanditiis animi impedit atque non accusamus sunt beatae eveniet reprehenderit voluptatum incidunt pariatur doloremque voluptatem delectus dolor quam reprehenderit sapiente consequatur qui voluptates nostrum quis aperiam beatae aperiam facilis eos earum modi et magnam dolore labore exercitationem dolor saepe ullam voluptates doloremque alias magnam autem iure non debitis voluptatibus officiis pariatur enim quos accusamus ea ad optio in quasi expedita ipsum voluptatum quibusdam quisquam quos rem vel soluta nihil sunt necessitatibus velit adipisci illo aut dolore nesciunt officia iusto ex optio vel culpa tempora nihil perferendis rem vero dolor optio beatae quae porro aspernatur est atque dolorem aperiam laborum nesciunt magnam rem ab ipsa similique enim dignissimos ex sapiente quisquam velit quos aspernatur enim error eveniet dicta ducimus asperiores quo perferendis occaecati ipsum molestias temporibus tempora est id optio eos ea ea sunt in eligendi libero dignissimos voluptatem perspiciatis modi aut incidunt voluptas velit eaque recusandae voluptatibus modi molestias cumque necessitatibus aut eveniet minus nesciunt at laborum occaecati nihil corporis debitis expedita nisi eos laudantium magnam repudiandae non incidunt id voluptate distinctio reiciendis neque quam maiores quis dicta perferendis odio perferendis iure illum fugit consequuntur reprehenderit minima hic deserunt amet quis deserunt nihil similique esse laudantium nulla quibusdam nostrum voluptas fugit totam aut aliquam sapiente ab eaque repudiandae sunt sapiente vel neque in libero iure sequi saepe a soluta accusantium amet exercitationem quos asperiores culpa eius consectetur quo id sapiente voluptas iure illo blanditiis delectus tenetur ipsum illo doloremque perspiciatis eius iure placeat magni minus accusamus quidem officiis nulla cumque tenetur dicta molestiae debitis aut tenetur delectus autem laudantium at quidem fuga nihil cum earum asperiores officiis expedita ipsum vero perferendis consequatur officia cumque possimus porro cumque tenetur vero quas laborum harum quod similique nesciunt distinctio repudiandae perspiciatis temporibus possimus recusandae aliquid provident facere at quo aspernatur
+deveria ser
+a a ut ut ut in in in in in in id id id id id id ex ex ex ex ex ex ex ex ex ex ex ex et et et et et ea ea ea ea ea ea ea ea at at at at at at ad ad ad ad ad ab ab ab ab ab vel vel vel vel vel vel sit sit sit sed sed sed sed rem rem rem rem rem quo quo quo quo quo quo quo quo quo qui qui qui qui qui non non non non nam hic hic hic est est est est eos eos eos eos eos eos eos eos cum cum cum cum aut aut aut aut aut aut aut aut vero vero vero vero vero vero vero unde unde sunt sunt sunt sunt sunt sunt sint sint sint quos quos quos quos quos quos quos quod quod quod quod quod quod quod quis quis quis quia quia quia quia quas quas quas quam quam quam quam quae quae quae quae odit odit odit odit odit odit odit odio odio odio odio odio odio nisi nisi nisi nemo nemo nemo nemo nemo modi modi modi modi modi modi modi modi modi modi iure iure iure iure iure iure iure iste iste iste iste iste iste ipsa ipsa ipsa ipsa ipsa ipsa ipsa illo illo illo illo illo illo illo fuga fuga fuga fuga fuga fuga fuga esse esse esse esse enim enim enim enim eius eius eius eius amet amet amet vitae vitae vitae vitae vitae velit velit velit velit velit velit ullam ullam totam totam totam totam sequi sequi sequi sequi sequi saepe saepe saepe saepe rerum rerum rerum quasi quasi quasi porro porro optio optio optio optio optio optio optio optio optio omnis omnis omnis omnis nulla nulla nulla nulla nulla nulla nobis nobis nobis nihil nihil nihil nihil nihil nihil nihil nihil nihil neque neque neque neque neque neque natus natus minus minus minus minus minus magni magni magni magni iusto iusto iusto ipsum ipsum ipsum ipsum ipsum ipsam ipsam illum illum harum harum fugit fugit fugit fugit error error error error earum earum earum earum earum eaque eaque eaque eaque dolor dolor dolor dolor dolor dolor dolor dolor dolor dolor dolor dicta dicta dicta dicta culpa culpa autem autem autem autem atque atque atque atque atque animi animi animi animi animi alias alias alias veniam veniam veniam veniam soluta soluta soluta soluta soluta quidem quidem quidem minima minima minima minima minima maxime maxime maxime maxime maxime magnam magnam magnam magnam magnam magnam magnam magnam libero libero libero libero libero labore labore labore itaque itaque fugiat fugiat fugiat fugiat facere facere facere dolore dolore dolore dolore dolore dolore dolore dolore cumque cumque cumque cumque cumque cumque cumque cumque beatae beatae beatae beatae beatae tenetur tenetur tenetur tenetur tenetur tenetur tempore tempore tempore tempore tempora tempora tempora ratione ratione ratione ratione ratione ratione quaerat quaerat placeat placeat placeat placeat placeat officia officia officia officia officia numquam nostrum nostrum nostrum nostrum nostrum maiores maiores maiores maiores maiores laborum laborum laborum laborum laborum laborum impedit impedit impedit facilis facilis facilis eveniet eveniet eveniet eveniet ducimus ducimus ducimus ducimus ducimus ducimus ducimus ducimus dolorum dolorum dolorum dolorum dolores dolores dolores dolorem dolorem dolorem dolorem dolorem dolorem dolorem dolorem debitis debitis debitis debitis debitis commodi aperiam aperiam aperiam aperiam aperiam aperiam aliquid aliquid aliquid aliquam aliquam aliquam aliquam aliquam voluptas voluptas voluptas voluptas voluptas voluptas voluptas suscipit suscipit suscipit suscipit suscipit suscipit suscipit sapiente sapiente sapiente sapiente sapiente sapiente sapiente sapiente sapiente repellat repellat quisquam quisquam quisquam quisquam quisquam possimus possimus possimus possimus possimus possimus pariatur pariatur pariatur pariatur pariatur officiis officiis officiis officiis officiis officiis officiis nesciunt nesciunt nesciunt nesciunt nesciunt mollitia mollitia incidunt incidunt incidunt incidunt expedita expedita expedita expedita expedita eligendi eligendi deserunt deserunt deserunt deleniti deleniti deleniti delectus delectus delectus delectus delectus delectus delectus corrupti corrupti corrupti corporis adipisci adipisci adipisci voluptate voluptate voluptate voluptate veritatis veritatis veritatis similique similique similique similique similique similique quibusdam quibusdam quibusdam quibusdam quibusdam quibusdam provident provident provident provident provident provident occaecati occaecati occaecati occaecati occaecati molestias molestias molestias molestiae molestiae molestiae inventore inventore explicabo explicabo explicabo excepturi excepturi doloribus doloribus assumenda assumenda assumenda assumenda assumenda accusamus accusamus accusamus accusamus accusamus accusamus accusamus accusamus voluptatum voluptatum voluptatum voluptatum voluptatum voluptates voluptates voluptates voluptates voluptates voluptates voluptates voluptates voluptates voluptatem voluptatem voluptatem voluptatem temporibus temporibus temporibus reiciendis reiciendis reiciendis reiciendis recusandae recusandae recusandae recusandae recusandae recusandae recusandae laudantium laudantium laudantium laudantium laboriosam laboriosam laboriosam doloremque doloremque doloremque doloremque doloremque doloremque distinctio distinctio distinctio distinctio cupiditate cupiditate blanditiis blanditiis blanditiis blanditiis aspernatur aspernatur aspernatur aspernatur aspernatur aspernatur asperiores asperiores asperiores asperiores architecto architecto architecto architecto repudiandae repudiandae repudiandae repudiandae repudiandae repudiandae repellendus repellendus repellendus praesentium praesentium praesentium perferendis perferendis perferendis perferendis perferendis perferendis perferendis perferendis perferendis dignissimos dignissimos dignissimos dignissimos dignissimos consequatur consequatur consequatur consequatur consequatur consectetur consectetur consectetur consectetur accusantium accusantium accusantium voluptatibus voluptatibus voluptatibus voluptatibus voluptatibus voluptatibus perspiciatis perspiciatis perspiciatis perspiciatis perspiciatis perspiciatis consequuntur consequuntur consequuntur consequuntur reprehenderit reprehenderit reprehenderit reprehenderit necessitatibus necessitatibus necessitatibus necessitatibus exercitationem exercitationem exercitationem exercitationem
+mas deu
+a a ab ab ab ab ab accusamus accusamus accusamus accusamus accusamus accusamus accusamus accusamus accusantium accusantium accusantium ad ad ad ad ad adipisci adipisci adipisci amet amet amet aperiam aperiam aperiam aperiam aperiam aperiam aliquid aliquid aliquid aliquam aliquam aliquam aliquam aliquam laudantium laudantium laudantium laudantium laboriosam laboriosam laboriosam doloremque doloremque doloremque doloremque doloremque doloremque distinctio distinctio distinctio distinctio cupiditate cupiditate blanditiis blanditiis blanditiis blanditiis aspernatur aspernatur aspernatur aspernatur aspernatur aspernatur asperiores asperiores asperiores asperiores architecto architecto architecto architecto assumenda assumenda assumenda assumenda assumenda est est est est eos eos eos eos eos eos eos eos cum cum cum cum aut aut aut aut aut aut aut aut consequatur consequatur consequatur consequatur consequatur consectetur consectetur consectetur consectetur consequuntur consequuntur consequuntur consequuntur corrupti corrupti corrupti corporis ducimus ducimus ducimus ducimus ducimus ducimus ducimus ducimus dolorum dolorum dolorum dolorum dolores dolores dolores dolorem dolorem dolorem dolorem dolorem dolorem dolorem dolorem debitis debitis debitis debitis debitis commodi deserunt deserunt deserunt deleniti deleniti deleniti delectus delectus delectus delectus delectus delectus delectus dignissimos dignissimos dignissimos dignissimos dignissimos doloribus doloribus esse esse esse esse enim enim enim enim eius eius eius eius eligendi eligendi in in in in in in id id id id id id ex ex ex ex ex ex ex ex ex ex ex ex et et et et et ea ea ea ea ea ea ea ea at at at at at at eveniet eveniet eveniet eveniet explicabo explicabo explicabo excepturi excepturi exercitationem exercitationem exercitationem exercitationem expedita expedita expedita expedita expedita facilis facilis facilis hic hic hic iure iure iure iure iure iure iure iste iste iste iste iste iste ipsa ipsa ipsa ipsa ipsa ipsa ipsa illo illo illo illo illo illo illo fuga fuga fuga fuga fuga fuga fuga impedit impedit impedit incidunt incidunt incidunt incidunt inventore inventore laborum laborum laborum laborum laborum laborum minima minima minima minima minima maxime maxime maxime maxime maxime magnam magnam magnam magnam magnam magnam magnam magnam libero libero libero libero libero labore labore labore itaque itaque fugiat fugiat fugiat fugiat facere facere facere dolore dolore dolore dolore dolore dolore dolore dolore cumque cumque cumque cumque cumque cumque cumque cumque beatae beatae beatae beatae beatae maiores maiores maiores maiores maiores modi modi modi modi modi modi modi modi modi modi molestias molestias molestias molestiae molestiae molestiae mollitia mollitia nam necessitatibus necessitatibus necessitatibus necessitatibus nemo nemo nemo nemo nemo vitae vitae vitae vitae vitae velit velit velit velit velit velit ullam ullam totam totam totam totam sequi sequi sequi sequi sequi saepe saepe saepe saepe rerum rerum rerum quasi quasi quasi porro porro optio optio optio optio optio optio optio optio optio omnis omnis omnis omnis nulla nulla nulla nulla nulla nulla nobis nobis nobis nihil nihil nihil nihil nihil nihil nihil nihil nihil neque neque neque neque neque neque natus natus minus minus minus minus minus magni magni magni magni iusto iusto iusto ipsum ipsum ipsum ipsum ipsum ipsam ipsam illum illum harum harum fugit fugit fugit fugit error error error error earum earum earum earum earum eaque eaque eaque eaque dolor dolor dolor dolor dolor dolor dolor dolor dolor dolor dolor dicta dicta dicta dicta culpa culpa autem autem autem autem atque atque atque atque atque animi animi animi animi animi alias alias alias sapiente sapiente sapiente sapiente sapiente sapiente sapiente sapiente sapiente repellat repellat quisquam quisquam quisquam quisquam quisquam possimus possimus possimus possimus possimus possimus pariatur pariatur pariatur pariatur pariatur officiis officiis officiis officiis officiis officiis officiis nesciunt nesciunt nesciunt nesciunt nesciunt non non non non officia officia officia officia officia numquam nostrum nostrum nostrum nostrum nostrum perferendis perferendis perferendis perferendis perferendis perferendis perferendis perferendis perferendis perspiciatis perspiciatis perspiciatis perspiciatis perspiciatis perspiciatis quaerat quaerat placeat placeat placeat placeat placeat praesentium praesentium praesentium qui qui qui qui qui quidem quidem quidem quos quos quos quos quos quos quos quod quod quod quod quod quod quod quis quis quis quia quia quia quia quas quas quas quam quam quam quam quae quae quae quae odit odit odit odit odit odit odit odio odio odio odio odio odio nisi nisi nisi quo quo quo quo quo quo quo quo quo ratione ratione ratione ratione ratione ratione reiciendis reiciendis reiciendis reiciendis recusandae recusandae recusandae recusandae recusandae recusandae recusandae reprehenderit reprehenderit reprehenderit reprehenderit repudiandae repudiandae repudiandae repudiandae repudiandae repudiandae repellendus repellendus repellendus sed sed sed sed rem rem rem rem rem voluptate voluptate voluptate voluptate veritatis veritatis veritatis similique similique similique similique similique similique quibusdam quibusdam quibusdam quibusdam quibusdam quibusdam provident provident provident provident provident provident occaecati occaecati occaecati occaecati occaecati sint sint sint sit sit sit soluta soluta soluta soluta soluta sunt sunt sunt sunt sunt sunt suscipit suscipit suscipit suscipit suscipit suscipit suscipit temporibus temporibus temporibus tenetur tenetur tenetur tenetur tenetur tenetur tempore tempore tempore tempore tempora tempora tempora unde unde ut ut ut vel vel vel vel vel vel veniam veniam veniam veniam vero vero vero vero vero vero vero voluptas voluptas voluptas voluptas voluptas voluptas voluptas voluptatum voluptatum voluptatum voluptatum voluptatum voluptates voluptates voluptates voluptates voluptates voluptates voluptates voluptates voluptates voluptatem voluptatem voluptatem voluptatem voluptatibus voluptatibus voluptatibus voluptatibus voluptatibus voluptatibus 
+
+Teste 8 deu errado!
+None
+O resultado para
+iure libero voluptatum quam blanditiis nemo quaerat laudantium quod incidunt ullam quos est velit ipsa vitae dolore blanditiis natus itaque ipsum cupiditate praesentium veniam nobis adipisci quos asperiores incidunt enim totam perferendis blanditiis quaerat recusandae quod saepe explicabo culpa corrupti veniam nesciunt numquam ipsam harum quaerat quisquam nesciunt possimus dolore dolorem similique vel officiis sunt reiciendis repellendus illum pariatur illo facere pariatur a provident tenetur culpa eum veniam incidunt doloribus quia earum corrupti perferendis molestiae sunt qui aut minima eaque saepe aut cum quo accusantium nihil rem voluptatibus est laborum odio delectus molestiae facilis eum ipsa sunt accusamus harum quisquam vero laborum fugiat sequi corrupti eius officiis unde hic beatae mollitia ea vel voluptate incidunt sapiente laudantium corrupti dolores autem aspernatur velit reiciendis repellat occaecati sit culpa reiciendis explicabo pariatur pariatur facere facere reprehenderit beatae ipsam molestias expedita officiis nobis nemo ad blanditiis hic voluptatibus culpa eligendi nihil fugit accusamus velit praesentium voluptas fugit molestiae expedita aliquid deleniti eligendi assumenda veniam porro culpa accusamus nostrum fugit dolorem repellendus impedit iure sequi adipisci mollitia eveniet quia architecto nihil magni nulla exercitationem earum illum nostrum inventore vitae porro voluptas deserunt eaque ipsam illo fugiat at aliquam repudiandae necessitatibus quibusdam repellendus tenetur hic similique omnis fugit expedita alias quam ducimus quam modi numquam rem voluptate molestiae earum placeat porro natus possimus non labore laborum nobis veniam animi dignissimos quo itaque eius illo ea illo voluptate cum voluptates ut optio explicabo quos reiciendis inventore sint deleniti pariatur neque aliquam rerum illo voluptatem saepe tempora perspiciatis quos aliquid quos itaque magnam incidunt aliquid ratione sed laudantium maxime quis explicabo itaque beatae laudantium maxime eius ratione veritatis laborum voluptatum tempora laborum repellendus consectetur repellat dolorum error quod incidunt ipsam voluptatibus ad dolorum
+deveria ser
+a ut ea ea at ad ad vel vel sit sed rem rem quo quo qui non hic hic hic eum eum est est cum cum aut aut vero unde sunt sunt sunt sint quos quos quos quos quos quod quod quod quis quia quia quam quam quam odio nemo nemo modi iure iure ipsa ipsa illo illo illo illo illo enim eius eius eius vitae vitae velit velit velit ullam totam sequi sequi saepe saepe saepe rerum porro porro porro optio omnis nulla nobis nobis nobis nihil nihil nihil neque natus natus magni ipsum ipsam ipsam ipsam ipsam illum illum harum harum fugit fugit fugit fugit error earum earum earum eaque eaque culpa culpa culpa culpa culpa autem animi alias veniam veniam veniam veniam veniam minima maxime maxime magnam libero labore itaque itaque itaque itaque fugiat fugiat facere facere facere dolore dolore beatae beatae beatae tenetur tenetur tempora tempora ratione ratione quaerat quaerat quaerat placeat numquam numquam nostrum nostrum laborum laborum laborum laborum laborum impedit facilis eveniet ducimus dolorum dolorum dolores dolorem dolorem aliquid aliquid aliquid aliquam aliquam voluptas voluptas sapiente repellat repellat quisquam quisquam possimus possimus pariatur pariatur pariatur pariatur pariatur officiis officiis officiis nesciunt nesciunt mollitia mollitia incidunt incidunt incidunt incidunt incidunt incidunt expedita expedita expedita eligendi eligendi deserunt deleniti deleniti delectus corrupti corrupti corrupti corrupti adipisci adipisci voluptate voluptate voluptate veritatis similique similique quibusdam provident occaecati molestias molestiae molestiae molestiae molestiae inventore inventore explicabo explicabo explicabo explicabo doloribus assumenda accusamus accusamus accusamus voluptatum voluptatum voluptates voluptatem reiciendis reiciendis reiciendis reiciendis recusandae laudantium laudantium laudantium laudantium cupiditate blanditiis blanditiis blanditiis blanditiis aspernatur asperiores architecto repudiandae repellendus repellendus repellendus repellendus praesentium praesentium perferendis perferendis dignissimos consectetur accusantium voluptatibus voluptatibus voluptatibus perspiciatis reprehenderit necessitatibus exercitationem
+mas deu
+a accusamus accusamus accusamus accusantium ad ad adipisci adipisci animi alias cupiditate blanditiis blanditiis blanditiis blanditiis aspernatur asperiores architecto assumenda at culpa culpa culpa culpa autem consectetur culpa deserunt deleniti deleniti delectus corrupti corrupti corrupti corrupti dignissimos dolore dolore beatae beatae beatae doloribus facilis eveniet ducimus dolorum dolorum dolores dolorem dolorem aliquid aliquid aliquid aliquam aliquam ea ea earum earum earum eaque eaque enim eius eius eius eligendi error exercitationem expedita expedita expedita eligendi explicabo explicabo explicabo explicabo fugiat fugiat facere facere facere harum harum fugit fugit fugit fugit vel vel sit sed rem rem quo quo qui non hic hic hic eum eum est est cum cum aut aut illo illo illo illo illo impedit incidunt incidunt incidunt incidunt incidunt incidunt inventore inventore ipsa ipsa ipsum ipsam ipsam ipsam ipsam illum illum iure iure laborum laborum laborum laborum laborum laudantium laudantium laudantium laudantium minima maxime maxime magnam libero labore itaque itaque itaque itaque molestias molestiae molestiae molestiae molestiae necessitatibus nesciunt nesciunt mollitia mollitia porro porro porro optio omnis nulla nobis nobis nobis nihil nihil nihil neque natus natus magni occaecati possimus possimus pariatur pariatur pariatur pariatur pariatur officiis officiis officiis perspiciatis provident quaerat quaerat quaerat placeat numquam numquam nostrum nostrum quos quos quos quos quos quod quod quod quis quia quia quam quam quam odio nemo nemo modi quibusdam quisquam quisquam ratione ratione reiciendis reiciendis reiciendis reiciendis recusandae repellat repellat reprehenderit repudiandae repellendus repellendus repellendus repellendus praesentium praesentium perferendis perferendis sapiente vitae vitae velit velit velit ullam totam sequi sequi saepe saepe saepe rerum similique similique tenetur tenetur tempora tempora vero unde sunt sunt sunt sint ut veniam veniam veniam veniam veniam veritatis voluptas voluptas voluptate voluptate voluptate voluptatum voluptatum voluptates voluptatem voluptatibus voluptatibus voluptatibus 
+
+Teste 9 deu errado!
+None
+O resultado para
+sunt quod blanditiis commodi nemo cupiditate ipsam odio delectus sequi ducimus omnis doloremque laudantium quod vero quae fugiat doloribus eos ullam incidunt illum modi itaque aperiam harum rerum atque libero autem modi rerum dolore veniam illum quod molestias nisi hic at quam quam ipsam mollitia aspernatur repellat aliquam praesentium molestias odio optio explicabo ducimus assumenda dolores facere animi saepe odit quaerat rem aspernatur sequi sit eligendi amet aut eos ipsum repudiandae dolorem odio unde consectetur in tempore molestias sit voluptates quos doloremque occaecati ad veritatis distinctio doloremque sed debitis officia minima voluptates ducimus vitae laudantium fugit dolor vero minus earum quaerat quisquam quo eius possimus repudiandae quo tenetur nemo officia sed deserunt perferendis assumenda nobis error deleniti non eius iusto totam tenetur ratione officiis veniam nemo velit nostrum ex velit molestiae sit qui alias libero facilis error natus deserunt vel veniam nam dolores magni reiciendis dolor cumque quia asperiores dolor repellendus nesciunt explicabo consequuntur veniam autem incidunt iure dolor quas consequuntur ipsum corporis rerum recusandae inventore id molestiae numquam vero harum iste praesentium tempore facilis adipisci fuga quis animi adipisci voluptas veniam magni quaerat explicabo dolores magnam sapiente odit ea deleniti exercitationem delectus expedita magni tempore explicabo necessitatibus voluptatibus minus non perferendis occaecati iste nisi minima aliquam error ea quasi quis vitae et possimus accusantium ab soluta minus dolores recusandae molestiae deserunt nulla soluta cupiditate quia iure at expedita occaecati error quibusdam voluptatem vero possimus eveniet nihil ex repellendus totam atque magnam magni hic quia consectetur vel quam mollitia eaque enim ullam repellat fuga non quisquam accusamus ex repudiandae ex expedita possimus esse provident distinctio maiores mollitia aliquam id accusamus ullam in numquam mollitia molestias repudiandae quasi quam recusandae numquam culpa dolorum ab voluptates ducimus odit quos corporis repellendus earum repellendus architecto officiis perferendis dolorem similique ipsa aperiam deleniti eius numquam quo atque libero praesentium non itaque aliquid asperiores quidem accusantium dolorem eligendi maiores aut explicabo reiciendis beatae voluptate labore libero voluptatum fuga explicabo quaerat laudantium excepturi quos in magnam molestiae rem ullam voluptas voluptatibus dolorem quas omnis nesciunt dolorum repudiandae quia eius dolore ut accusantium neque quod in aut amet maxime est at assumenda laudantium aut quasi possimus accusantium consequuntur quaerat dolores vero tempore recusandae tempora placeat cum labore corrupti quis vitae debitis asperiores eius tempore suscipit eum nesciunt adipisci voluptates
+deveria ser
+ut in in in in id id ex ex ex ex et ea ea at at at ad ab ab vel vel sit sit sit sed sed rem rem quo quo quo qui non non non non nam hic hic eum est eos eos cum aut aut aut aut vero vero vero vero vero unde sunt quos quos quos quod quod quod quod quis quis quis quia quia quia quia quas quas quam quam quam quam quae odit odit odit odio odio odio nisi nisi nemo nemo nemo modi modi iure iure iste iste ipsa fuga fuga fuga esse enim eius eius eius eius eius amet amet vitae vitae vitae velit velit ullam ullam ullam ullam totam totam sequi sequi saepe rerum rerum rerum quasi quasi quasi optio omnis omnis nulla nobis nihil neque natus minus minus minus magni magni magni magni iusto ipsum ipsum ipsam ipsam illum illum harum harum fugit error error error error earum earum eaque dolor dolor dolor dolor culpa autem autem atque atque atque animi animi alias veniam veniam veniam veniam veniam soluta soluta quidem minima minima maxime magnam magnam magnam libero libero libero libero labore labore itaque itaque fugiat facere dolore dolore cumque beatae tenetur tenetur tempore tempore tempore tempore tempore tempora ratione quaerat quaerat quaerat quaerat quaerat placeat officia officia numquam numquam numquam numquam nostrum maiores maiores facilis facilis eveniet ducimus ducimus ducimus ducimus dolorum dolorum dolores dolores dolores dolores dolores dolorem dolorem dolorem dolorem debitis debitis commodi aperiam aperiam aliquid aliquam aliquam aliquam voluptas voluptas suscipit sapiente repellat repellat quisquam quisquam possimus possimus possimus possimus possimus officiis officiis nesciunt nesciunt nesciunt mollitia mollitia mollitia mollitia incidunt incidunt expedita expedita expedita eligendi eligendi deserunt deserunt deserunt deleniti deleniti deleniti delectus delectus corrupti corporis corporis adipisci adipisci adipisci voluptate veritatis similique quibusdam provident occaecati occaecati occaecati molestias molestias molestias molestias molestiae molestiae molestiae molestiae inventore explicabo explicabo explicabo explicabo explicabo explicabo excepturi doloribus assumenda assumenda assumenda accusamus accusamus voluptatum voluptates voluptates voluptates voluptates voluptatem reiciendis reiciendis recusandae recusandae recusandae recusandae laudantium laudantium laudantium laudantium doloremque doloremque doloremque distinctio distinctio cupiditate cupiditate blanditiis aspernatur aspernatur asperiores asperiores asperiores architecto repudiandae repudiandae repudiandae repudiandae repudiandae repellendus repellendus repellendus repellendus praesentium praesentium praesentium perferendis perferendis perferendis consectetur consectetur accusantium accusantium accusantium accusantium voluptatibus voluptatibus consequuntur consequuntur consequuntur necessitatibus exercitationem
+mas deu
+accusantium ad ab ab accusantium accusantium accusantium aliquid aliquam aliquam aliquam error error error error earum earum eaque dolor dolor dolor dolor culpa autem autem atque atque atque animi animi alias aperiam aperiam blanditiis aspernatur aspernatur asperiores asperiores asperiores architecto beatae commodi consectetur consectetur consequuntur consequuntur consequuntur eum est eos eos cum aut aut aut aut dolore dolore cumque doloremque doloremque doloremque distinctio distinctio cupiditate cupiditate eveniet ducimus ducimus ducimus ducimus dolorum dolorum dolores dolores dolores dolores dolores dolorem dolorem dolorem dolorem debitis debitis ex ex ex ex et ea ea at at at exercitationem incidunt incidunt expedita expedita expedita eligendi eligendi deserunt deserunt deserunt deleniti deleniti deleniti delectus delectus corrupti corporis corporis adipisci adipisci adipisci facere maiores maiores facilis facilis fugiat hic hic in in in in id id itaque itaque minus minus minus magni magni magni magni iusto ipsum ipsum ipsam ipsam illum illum harum harum fugit laudantium laudantium laudantium laudantium minima minima maxime magnam magnam magnam libero libero libero libero labore labore quibusdam provident occaecati occaecati occaecati molestias molestias molestias molestias molestiae molestiae molestiae molestiae inventore explicabo explicabo explicabo explicabo explicabo explicabo excepturi doloribus assumenda assumenda assumenda accusamus accusamus neque natus necessitatibus nesciunt nesciunt nesciunt mollitia mollitia mollitia mollitia nulla nobis nihil quaerat quaerat quaerat quaerat quaerat placeat officia officia numquam numquam numquam numquam nostrum optio omnis omnis perferendis perferendis perferendis quisquam quisquam possimus possimus possimus possimus possimus officiis officiis praesentium praesentium praesentium quasi quasi quasi quidem quo quo quo qui non non non non nam vero vero vero vero vero unde sunt quos quos quos quod quod quod quod quis quis quis quia quia quia quia quas quas quam quam quam quam quae odit odit odit odio odio odio nisi nisi nemo nemo nemo modi modi iure iure iste iste ipsa fuga fuga fuga esse enim eius eius eius eius eius amet amet rem rem suscipit sapiente repellat repellat repudiandae repudiandae repudiandae repudiandae repudiandae repellendus repellendus repellendus repellendus sit sit sit sed sed similique soluta soluta tenetur tenetur tempore tempore tempore tempore tempore tempora ratione vitae vitae vitae velit velit ullam ullam ullam ullam totam totam sequi sequi saepe rerum rerum rerum ut vel vel veniam veniam veniam veniam veniam veritatis voluptas voluptas voluptate voluptatibus voluptatibus voluptatum voluptates voluptates voluptates voluptates voluptatem reiciendis reiciendis recusandae recusandae recusandae recusandae 
+
+Teste 10 deu errado!
+None
+O resultado para
+quia magnam dolorum fugit mollitia debitis explicabo tempore dolores quasi sunt consectetur magnam eaque fugit occaecati tempora ut labore reiciendis beatae architecto accusamus omnis modi unde optio cupiditate qui aut voluptatibus ab quibusdam quisquam maxime minima illum commodi perspiciatis accusantium a rerum necessitatibus quasi harum consectetur sed blanditiis nobis expedita deserunt animi ab nostrum ducimus veritatis accusamus exercitationem iure dicta cum dolore rem tempora repellendus eligendi officiis consectetur velit consequuntur optio occaecati amet nihil voluptatem voluptas eveniet ullam ipsum doloremque expedita fugiat rerum reiciendis eligendi dolore at reprehenderit repudiandae debitis et atque placeat similique officiis odio et error eaque cumque quis commodi vitae nemo esse expedita quis rem ex ipsa totam voluptatem magni explicabo magni quaerat tempore ipsam inventore quis veritatis praesentium cupiditate nostrum porro temporibus cupiditate aliquid dicta necessitatibus explicabo possimus porro quaerat dolor veniam voluptate aliquam repudiandae et delectus esse doloremque nisi saepe neque impedit exercitationem explicabo ullam expedita qui non tempora doloribus recusandae veritatis quasi necessitatibus culpa iure ex expedita nulla tenetur repellat quo ex nam minus qui tempora earum architecto officia consectetur maxime sed quisquam temporibus hic hic sunt fuga nisi ab eius eum dicta tempore quibusdam cum ea dolores facere maiores dolores accusamus dolor atque velit deserunt cum in possimus minus corporis in veritatis aliquam itaque veniam odio ducimus necessitatibus labore tempore laborum accusamus maiores doloremque tempore nemo a debitis totam nemo dolor maiores aliquid debitis voluptatibus suscipit cum quibusdam amet aperiam beatae ad ipsum voluptatibus voluptates voluptatem voluptatem fugiat dolorum quos fuga eligendi repudiandae temporibus aspernatur nam sunt hic voluptates explicabo libero dolores atque quo amet unde quam laborum labore repellat tempora perspiciatis rerum illo perspiciatis accusamus at animi fugiat dolores ad non magnam dolores ratione aspernatur nihil eius officiis sequi ducimus beatae accusantium aliquid laboriosam sint dolores officiis sit cumque illo tempore voluptate vel exercitationem accusantium saepe eos ducimus facilis dolores illo eos recusandae molestiae omnis sequi sequi itaque qui veniam fuga possimus vitae praesentium expedita praesentium dignissimos aliquam quisquam aperiam perspiciatis dolor deleniti consequatur pariatur culpa voluptas possimus officiis pariatur dolorem voluptatem quisquam dolor unde optio aliquid distinctio nesciunt cupiditate ducimus praesentium nam deserunt eveniet libero quidem cumque voluptas molestiae non praesentium est cupiditate neque facere facere magni laboriosam facilis quas repellat illum quos aliquid ad sequi animi eum quos quod ducimus eos nihil perferendis eum debitis qui earum aperiam veniam iste explicabo soluta eaque impedit dolores tenetur corrupti architecto provident quisquam odio itaque laudantium pariatur doloremque vitae voluptatem odio nostrum quaerat autem vero incidunt illo soluta adipisci ratione aspernatur commodi doloribus dolor voluptatum tenetur dicta exercitationem officia numquam nesciunt officia natus quae et necessitatibus tempora voluptatum doloremque amet eos eum fugiat iste delectus quibusdam suscipit aut consectetur quasi tenetur perferendis excepturi voluptate voluptatum eaque aperiam voluptas magnam soluta necessitatibus a magni in quasi culpa fuga veritatis ullam architecto exercitationem pariatur quas eveniet qui natus perspiciatis occaecati similique qui veritatis dolores nostrum atque adipisci eius dignissimos beatae quibusdam tempore voluptatem iusto occaecati molestias ipsam exercitationem eligendi ab unde non adipisci totam tenetur ab placeat odit numquam autem eum rerum ipsum eaque repellat nihil excepturi error dolore incidunt blanditiis error tenetur amet eaque autem natus impedit reprehenderit dolore beatae sequi possimus delectus nam debitis culpa eveniet aperiam fugit dolor voluptatibus quo incidunt aspernatur enim sequi molestiae nemo iste iste magnam veritatis eum nisi quos voluptatum odit omnis enim consequatur dolore officiis nisi voluptatum excepturi cupiditate molestias sint debitis cumque illum explicabo dolorem earum nulla recusandae consectetur vitae sequi assumenda quibusdam magnam quos perferendis quam fugit aperiam atque eveniet ipsum earum impedit rerum minus ipsum accusamus blanditiis error officia modi cupiditate quaerat reprehenderit maxime et aliquam ut alias dolorum harum minima adipisci quam eos voluptatem quae repellendus a sapiente vitae reprehenderit neque odit soluta cum maiores ex reprehenderit modi perspiciatis facilis fugiat nobis corrupti omnis laborum quaerat quaerat maxime facilis officia vel consectetur ullam voluptas culpa ad dicta autem cum quisquam dicta qui culpa nemo dolor quos rem tempora vel accusantium veritatis minima quam quia consequatur tempora ut et totam ab excepturi occaecati reiciendis exercitationem laudantium eius incidunt dolore reprehenderit laborum culpa deserunt dignissimos similique reprehenderit nam sit tempora voluptate nihil libero in id a inventore modi quo repudiandae corporis voluptatem nemo a deleniti harum eos laboriosam et earum aliquid autem sint dolor in ratione voluptates sequi maiores quidem eveniet dolores laboriosam eaque odio voluptates tempora fugiat provident pariatur sapiente laudantium possimus in odit quo ad quia dicta repudiandae rerum quis officiis expedita adipisci possimus saepe quae corporis atque molestiae quas autem ipsam rem aspernatur illum saepe soluta officia nulla explicabo magni dolorem possimus ipsum in ipsam aspernatur illum veniam blanditiis illo repellendus ea explicabo saepe quas earum libero dolores voluptatem architecto amet veritatis ipsum recusandae porro voluptatem nesciunt soluta blanditiis ut deserunt voluptate fuga eaque provident velit aliquam earum aperiam odio nisi aliquid veniam assumenda nihil beatae animi explicabo recusandae neque ipsam facilis similique sequi nulla autem minus molestiae repellendus quod officiis illo numquam natus perferendis eligendi at dolor ducimus modi veritatis deserunt provident mollitia quas praesentium minima dolor nobis numquam asperiores ullam blanditiis quo officia dolorem doloremque laborum similique recusandae reprehenderit atque sequi quibusdam velit dolore repudiandae beatae et assumenda iusto est provident expedita repellat alias illo repudiandae magnam tempora aliquid repellat velit et nam quasi perspiciatis odio voluptatibus explicabo velit reprehenderit odio consectetur sint nobis vero animi voluptatibus consectetur tempora rerum a corrupti deleniti necessitatibus consequuntur accusantium fugiat rem dolorem libero laboriosam architecto animi repellendus recusandae vero beatae vitae consequuntur tenetur porro mollitia ipsam quidem dolorem eveniet saepe ipsa vel est maxime a sint cupiditate adipisci reiciendis nihil molestiae provident minus iste impedit consequuntur consequuntur
+deveria ser
+a a a a a a a a ut ut ut ut in in in in in in in id ex ex ex ex et et et et et et et et et ea ea at at at ad ad ad ad ad ab ab ab ab ab ab vel vel vel vel sit sit sed sed rem rem rem rem rem quo quo quo quo quo quo qui qui qui qui qui qui qui qui non non non non nam nam nam nam nam nam hic hic hic eum eum eum eum eum eum est est est eos eos eos eos eos eos cum cum cum cum cum cum aut aut vero vero vero unde unde unde unde sunt sunt sunt sint sint sint sint sint quos quos quos quos quos quos quod quod quis quis quis quis quia quia quia quas quas quas quas quas quam quam quam quam quae quae quae odit odit odit odit odio odio odio odio odio odio odio odio nisi nisi nisi nisi nisi nemo nemo nemo nemo nemo nemo modi modi modi modi modi iure iure iste iste iste iste iste ipsa ipsa illo illo illo illo illo illo illo fuga fuga fuga fuga fuga esse esse enim enim eius eius eius eius amet amet amet amet amet amet vitae vitae vitae vitae vitae vitae velit velit velit velit velit velit ullam ullam ullam ullam ullam totam totam totam totam sequi sequi sequi sequi sequi sequi sequi sequi sequi sequi saepe saepe saepe saepe saepe saepe rerum rerum rerum rerum rerum rerum rerum quasi quasi quasi quasi quasi quasi porro porro porro porro optio optio optio omnis omnis omnis omnis nulla nulla nulla nulla nobis nobis nobis nobis nihil nihil nihil nihil nihil nihil nihil neque neque neque neque natus natus natus natus minus minus minus minus minus magni magni magni magni magni iusto iusto ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsam ipsam ipsam ipsam ipsam ipsam illum illum illum illum illum harum harum harum fugit fugit fugit fugit error error error error earum earum earum earum earum earum earum eaque eaque eaque eaque eaque eaque eaque eaque dolor dolor dolor dolor dolor dolor dolor dolor dolor dolor dolor dicta dicta dicta dicta dicta dicta dicta culpa culpa culpa culpa culpa culpa culpa autem autem autem autem autem autem autem atque atque atque atque atque atque atque animi animi animi animi animi animi alias alias veniam veniam veniam veniam veniam veniam soluta soluta soluta soluta soluta soluta quidem quidem quidem minima minima minima minima maxime maxime maxime maxime maxime magnam magnam magnam magnam magnam magnam magnam libero libero libero libero libero labore labore labore itaque itaque itaque fugiat fugiat fugiat fugiat fugiat fugiat fugiat facere facere facere dolore dolore dolore dolore dolore dolore dolore cumque cumque cumque cumque beatae beatae beatae beatae beatae beatae beatae beatae tenetur tenetur tenetur tenetur tenetur tenetur tenetur tempore tempore tempore tempore tempore tempore tempore tempora tempora tempora tempora tempora tempora tempora tempora tempora tempora tempora tempora ratione ratione ratione quaerat quaerat quaerat quaerat quaerat quaerat placeat placeat officia officia officia officia officia officia officia numquam numquam numquam numquam nostrum nostrum nostrum nostrum maiores maiores maiores maiores maiores laborum laborum laborum laborum laborum impedit impedit impedit impedit impedit facilis facilis facilis facilis facilis eveniet eveniet eveniet eveniet eveniet eveniet eveniet ducimus ducimus ducimus ducimus ducimus ducimus ducimus dolorum dolorum dolorum dolores dolores dolores dolores dolores dolores dolores dolores dolores dolores dolores dolores dolorem dolorem dolorem dolorem dolorem dolorem debitis debitis debitis debitis debitis debitis debitis commodi commodi commodi aperiam aperiam aperiam aperiam aperiam aperiam aperiam aliquid aliquid aliquid aliquid aliquid aliquid aliquid aliquid aliquam aliquam aliquam aliquam aliquam voluptas voluptas voluptas voluptas voluptas suscipit suscipit sapiente sapiente repellat repellat repellat repellat repellat repellat quisquam quisquam quisquam quisquam quisquam quisquam possimus possimus possimus possimus possimus possimus possimus possimus pariatur pariatur pariatur pariatur pariatur officiis officiis officiis officiis officiis officiis officiis officiis nesciunt nesciunt nesciunt mollitia mollitia mollitia incidunt incidunt incidunt incidunt expedita expedita expedita expedita expedita expedita expedita expedita eligendi eligendi eligendi eligendi eligendi deserunt deserunt deserunt deserunt deserunt deserunt deleniti deleniti deleniti delectus delectus delectus corrupti corrupti corrupti corporis corporis corporis adipisci adipisci adipisci adipisci adipisci adipisci voluptate voluptate voluptate voluptate voluptate veritatis veritatis veritatis veritatis veritatis veritatis veritatis veritatis veritatis veritatis similique similique similique similique similique quibusdam quibusdam quibusdam quibusdam quibusdam quibusdam quibusdam provident provident provident provident provident provident occaecati occaecati occaecati occaecati occaecati molestias molestias molestiae molestiae molestiae molestiae molestiae molestiae inventore inventore explicabo explicabo explicabo explicabo explicabo explicabo explicabo explicabo explicabo explicabo explicabo excepturi excepturi excepturi excepturi doloribus doloribus assumenda assumenda assumenda accusamus accusamus accusamus accusamus accusamus accusamus voluptatum voluptatum voluptatum voluptatum voluptatum voluptates voluptates voluptates voluptates voluptatem voluptatem voluptatem voluptatem voluptatem voluptatem voluptatem voluptatem voluptatem voluptatem voluptatem temporibus temporibus temporibus reiciendis reiciendis reiciendis reiciendis recusandae recusandae recusandae recusandae recusandae recusandae recusandae laudantium laudantium laudantium laboriosam laboriosam laboriosam laboriosam laboriosam doloremque doloremque doloremque doloremque doloremque doloremque distinctio cupiditate cupiditate cupiditate cupiditate cupiditate cupiditate cupiditate cupiditate blanditiis blanditiis blanditiis blanditiis blanditiis blanditiis aspernatur aspernatur aspernatur aspernatur aspernatur aspernatur asperiores architecto architecto architecto architecto architecto architecto repudiandae repudiandae repudiandae repudiandae repudiandae repudiandae repudiandae repellendus repellendus repellendus repellendus repellendus praesentium praesentium praesentium praesentium praesentium praesentium perferendis perferendis perferendis perferendis dignissimos dignissimos dignissimos consequatur consequatur consequatur consectetur consectetur consectetur consectetur consectetur consectetur consectetur consectetur consectetur accusantium accusantium accusantium accusantium accusantium voluptatibus voluptatibus voluptatibus voluptatibus voluptatibus voluptatibus perspiciatis perspiciatis perspiciatis perspiciatis perspiciatis perspiciatis perspiciatis consequuntur consequuntur consequuntur consequuntur consequuntur reprehenderit reprehenderit reprehenderit reprehenderit reprehenderit reprehenderit reprehenderit reprehenderit reprehenderit necessitatibus necessitatibus necessitatibus necessitatibus necessitatibus necessitatibus necessitatibus exercitationem exercitationem exercitationem exercitationem exercitationem exercitationem exercitationem
+mas deu
+a a a a a a a a ad ad ad ad ad ab ab ab ab ab ab accusamus accusamus accusamus accusamus accusamus accusamus accusantium accusantium accusantium accusantium accusantium adipisci adipisci adipisci adipisci adipisci adipisci alias alias commodi commodi commodi aperiam aperiam aperiam aperiam aperiam aperiam aperiam aliquid aliquid aliquid aliquid aliquid aliquid aliquid aliquid aliquam aliquam aliquam aliquam aliquam amet amet amet amet amet amet aspernatur aspernatur aspernatur aspernatur aspernatur aspernatur asperiores architecto architecto architecto architecto architecto architecto assumenda assumenda assumenda at at at autem autem autem autem autem autem autem atque atque atque atque atque atque atque animi animi animi animi animi animi aut aut beatae beatae beatae beatae beatae beatae beatae beatae blanditiis blanditiis blanditiis blanditiis blanditiis blanditiis consequatur consequatur consequatur consectetur consectetur consectetur consectetur consectetur consectetur consectetur consectetur consectetur consequuntur consequuntur consequuntur consequuntur consequuntur cum cum cum cum cum cum cumque cumque cumque cumque cupiditate cupiditate cupiditate cupiditate cupiditate cupiditate cupiditate cupiditate deserunt deserunt deserunt deserunt deserunt deserunt deleniti deleniti deleniti delectus delectus delectus corrupti corrupti corrupti corporis corporis corporis dignissimos dignissimos dignissimos distinctio dolor dolor dolor dolor dolor dolor dolor dolor dolor dolor dolor dicta dicta dicta dicta dicta dicta dicta culpa culpa culpa culpa culpa culpa culpa dolore dolore dolore dolore dolore dolore dolore eveniet eveniet eveniet eveniet eveniet eveniet eveniet ducimus ducimus ducimus ducimus ducimus ducimus ducimus dolorum dolorum dolorum dolores dolores dolores dolores dolores dolores dolores dolores dolores dolores dolores dolores dolorem dolorem dolorem dolorem dolorem dolorem debitis debitis debitis debitis debitis debitis debitis doloremque doloremque doloremque doloremque doloremque doloremque doloribus doloribus ea ea error error error error earum earum earum earum earum earum earum eaque eaque eaque eaque eaque eaque eaque eaque esse esse enim enim eius eius eius eius eligendi eligendi eligendi eligendi eligendi et et et et et et et et et eum eum eum eum eum eum est est est eos eos eos eos eos eos ex ex ex ex excepturi excepturi excepturi excepturi necessitatibus necessitatibus necessitatibus necessitatibus necessitatibus necessitatibus necessitatibus exercitationem exercitationem exercitationem exercitationem exercitationem exercitationem exercitationem expedita expedita expedita expedita expedita expedita expedita expedita explicabo explicabo explicabo explicabo explicabo explicabo explicabo explicabo explicabo explicabo explicabo harum harum harum fugit fugit fugit fugit hic hic hic id iure iure iste iste iste iste iste ipsa ipsa illo illo illo illo illo illo illo fuga fuga fuga fuga fuga illum illum illum illum illum in in in in in in in incidunt incidunt incidunt incidunt inventore inventore iusto iusto ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsam ipsam ipsam ipsam ipsam ipsam laudantium laudantium laudantium laboriosam laboriosam laboriosam laboriosam laboriosam minima minima minima minima maxime maxime maxime maxime maxime magnam magnam magnam magnam magnam magnam magnam libero libero libero libero libero labore labore labore itaque itaque itaque fugiat fugiat fugiat fugiat fugiat fugiat fugiat facere facere facere minus minus minus minus minus magni magni magni magni magni modi modi modi modi modi occaecati occaecati occaecati occaecati occaecati molestias molestias molestiae molestiae molestiae molestiae molestiae molestiae mollitia mollitia mollitia nam nam nam nam nam nam nemo nemo nemo nemo nemo nemo nesciunt nesciunt nesciunt nulla nulla nulla nulla nobis nobis nobis nobis nihil nihil nihil nihil nihil nihil nihil neque neque neque neque natus natus natus natus odit odit odit odit odio odio odio odio odio odio odio odio nisi nisi nisi nisi nisi non non non non tenetur tenetur tenetur tenetur tenetur tenetur tenetur tempore tempore tempore tempore tempore tempore tempore tempora tempora tempora tempora tempora tempora tempora tempora tempora tempora tempora tempora ratione ratione ratione quaerat quaerat quaerat quaerat quaerat quaerat placeat placeat officia officia officia officia officia officia officia numquam numquam numquam numquam nostrum nostrum nostrum nostrum maiores maiores maiores maiores maiores laborum laborum laborum laborum laborum impedit impedit impedit impedit impedit facilis facilis facilis facilis facilis optio optio optio omnis omnis omnis omnis possimus possimus possimus possimus possimus possimus possimus possimus pariatur pariatur pariatur pariatur pariatur officiis officiis officiis officiis officiis officiis officiis officiis perspiciatis perspiciatis perspiciatis perspiciatis perspiciatis perspiciatis perspiciatis porro porro porro porro praesentium praesentium praesentium praesentium praesentium praesentium perferendis perferendis perferendis perferendis provident provident provident provident provident provident quasi quasi quasi quasi quasi quasi quo quo quo quo quo quo qui qui qui qui qui qui qui qui quibusdam quibusdam quibusdam quibusdam quibusdam quibusdam quibusdam quisquam quisquam quisquam quisquam quisquam quisquam sint sint sint sint sint quos quos quos quos quos quos quod quod quis quis quis quis quia quia quia quas quas quas quas quas quam quam quam quam quae quae quae reiciendis reiciendis reiciendis reiciendis recusandae recusandae recusandae recusandae recusandae recusandae recusandae rem rem rem rem rem repellat repellat repellat repellat repellat repellat repellendus repellendus repellendus repellendus repellendus reprehenderit reprehenderit reprehenderit reprehenderit reprehenderit reprehenderit reprehenderit reprehenderit reprehenderit repudiandae repudiandae repudiandae repudiandae repudiandae repudiandae repudiandae sequi sequi sequi sequi sequi sequi sequi sequi sequi sequi saepe saepe saepe saepe saepe saepe rerum rerum rerum rerum rerum rerum rerum sapiente sapiente sed sed similique similique similique similique similique sit sit veniam veniam veniam veniam veniam veniam soluta soluta soluta soluta soluta soluta quidem quidem quidem vero vero vero unde unde unde unde sunt sunt sunt ullam ullam ullam ullam ullam totam totam totam totam ut ut ut ut vel vel vel vel vitae vitae vitae vitae vitae vitae velit velit velit velit velit velit veritatis veritatis veritatis veritatis veritatis veritatis veritatis veritatis veritatis veritatis voluptas voluptas voluptas voluptas voluptas suscipit suscipit voluptate voluptate voluptate voluptate voluptate voluptatum voluptatum voluptatum voluptatum voluptatum voluptates voluptates voluptates voluptates voluptatem voluptatem voluptatem voluptatem voluptatem voluptatem voluptatem voluptatem voluptatem voluptatem voluptatem temporibus temporibus temporibus voluptatibus voluptatibus voluptatibus voluptatibus voluptatibus voluptatibus 
+
+Teste 11 deu errado!
+None
+Teste 12 deu errado!
+None
+Teste 13 deu errado!
+None
+Teste 14 deu errado!
+None
+Teste 15 deu errado!
+None
+Teste 16 deu errado!
+None
+Teste 17 deu errado!
+None
+Teste 18 deu errado!
+None
+Teste 19 deu errado!
+None
+Teste 20 deu errado!
+None
+Nota exercicio 4: 0.1
+Procurando exercício 5...
+Procurando exercício 6...
+Procurando exercício 7...
+Procurando exercício 8...
+Procurando exercício 9...
+Procurando exercício 10...
+Procurando exercício 11...
+Exercício 11...
+Criando testes aleatórios...
+Testes Criados!
+ERRO: Proibido o uso de bibliotecas (sstream), exceto ['iostream', 'string', 'iomanip', 'regex']
+Nota exercicio 11: 0.0
+Nota total: 1.30
+{"scores": {"ex1": 1.0, "ex2": 0.2, "ex3": 0.0, "ex4": 0.1, "ex5": 0.0, "ex6": 0.0, "ex7": 0.0, "ex8": 0.0, "ex9": 0.0, "ex10": 0.0, "ex11": 0.0}}
