@@ -9,9 +9,8 @@ std::vector<double> notas(std::string s) {
     std::string token;
     
     while (std::getline(ss, token, ',')) {
-        // Ignorar os nomes (que são em posições pares) e pegar as notas (em posições ímpares)
         if (std::getline(ss, token, ',')) {
-            notas_vec.push_back(std::stod(token)); // Convertendo para double e adicionando ao vetor
+            notas_vec.push_back(std::stod(token)); 
         }
     }
     

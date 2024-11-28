@@ -10,7 +10,6 @@ void ordena_versoes(std::vector<std::string>& versoes) {
         std::string token_a, token_b;
         int num_a, num_b;
 
-        // Compare as versões token por token
         while (std::getline(ss_a, token_a, '.') && std::getline(ss_b, token_b, '.')) {
             num_a = std::stoi(token_a);
             num_b = std::stoi(token_b);
@@ -19,7 +18,6 @@ void ordena_versoes(std::vector<std::string>& versoes) {
             }
         }
 
-        // Se uma versão tem mais números, ela é maior
         return ss_a.eof() && !ss_b.eof(); 
     });
 }
