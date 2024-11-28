@@ -8,7 +8,7 @@ std::string retira(std::string texto, char c) {
     // Itera sobre todos os caracteres da string
     for (char t : texto) {
         if (t != c) {
-            resultado += t;  // Adiciona ao resultado apenas se o caractere não for igual a 'c'
+            resultado += t;  
         }
     }
     
@@ -16,8 +16,8 @@ std::string retira(std::string texto, char c) {
 }
 
 int main() {
-    std::cout << retira("Testes", 'e') << std::endl;  // Saída: "Tests"
-    std::cout << retira("Testes", 'X') << std::endl;  // Saída: "Testes"
+    std::cout << retira("Testes", 'e') << std::endl;  
+    std::cout << retira("Testes", 'X') << std::endl;  
     
     return 0;
 }
